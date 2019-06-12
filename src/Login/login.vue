@@ -189,6 +189,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+body{
+  height: 100%;
+  overflow: hidden;
+}
 .logoin {
   background: url(../../static/img/indexbg.png);
   .el-header {

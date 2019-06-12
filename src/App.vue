@@ -13,6 +13,8 @@ export default {
 <style>
 body {
   font-family: "微软雅黑", "黑体", "宋体";
+  padding: 0;
+  margin: 0;
 }
 ul,
 li {
