@@ -89,6 +89,9 @@ export default {
     display: flex;
     display: -webkit-flex;
     justify-content: space-around;
+    box-sizing: border-box;
+    padding:0;
+    margin-top: 110px;
     li {
       width: 130px;
       height: 130px;

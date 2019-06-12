@@ -12,7 +12,7 @@ export default {
 
 <style>
 body {
-  font-family: "微软雅黑", "黑体", "宋体";
+  font-family: "Segoe UI" "微软雅黑", "黑体", "宋体";
   padding: 0;
   margin: 0;
 }
@@ -27,6 +27,10 @@ li {
   height: 0;
   line-height: 0;
   visibility: hidden;
+}
+a{
+  text-emphasis: none;
+  text-decoration: none;
 }
 #gouerzi .el-menu-item-group__title{
   padding: 0 !important;

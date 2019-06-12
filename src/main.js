@@ -8,6 +8,7 @@ import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import "babel-polyfill"
+import store from './store/store'
 
 
 const baseUrlAddr = 'http://localhost:8085'
@@ -31,6 +32,7 @@ axios.interceptors.response.use(response => {
 var vm = new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 })

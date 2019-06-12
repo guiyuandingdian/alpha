@@ -7,7 +7,7 @@
     <div class="zhende">
       <el-row>
         <img src="../../static/img/indextit.png" alt class="solign">
-        <router-link to="/Login" class="log">开始留学申请</router-link>
+        <router-link to="/Home" class="log">开始留学申请</router-link>
       </el-row>
     </div>
   </div>
