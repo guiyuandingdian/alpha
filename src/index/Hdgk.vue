@@ -100,7 +100,7 @@ export default {
           height: 3px;
           position: absolute;
           left: 0;
-          bottom: -30px;
+          bottom: -13px;
           background: rgba(254, 51, 57, 1);
         }
       }
@@ -123,7 +123,7 @@ export default {
         height: 3px;
         position: absolute;
         left: 0;
-        bottom: -30px;
+        bottom: -13px;
         background: rgba(254, 51, 57, 1);
       }
     }
