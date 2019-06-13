@@ -3,7 +3,6 @@
     <div>
       <TabBar></TabBar>
     </div>
-    <p class="xian"></p>
     <div class="zhende">
       <el-row>
         <img src="../../static/img/indextit.png" alt class="solign">
@@ -68,12 +67,6 @@ export default {
       }
     }
   }
-  .xian{
-    width: 100%;
-    height: 0;
-    border-bottom: 1px dashed rgba(26,26,26,1);
-    padding: 0;
-    margin: 0;
-  }
+
 }
 </style>

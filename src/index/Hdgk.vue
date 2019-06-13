@@ -59,8 +59,7 @@ export default {
   methods: {
     toggle(i, v) {
       this.active = i;
-      this.currentView = v;
-      console.log(i,v)
+      this.currentView = v
     }
   },
   components: {

@@ -1,5 +1,8 @@
 <template>
   <div class="content">
+    <div class="banner">
+      <img src="../../static/img/banner.png" alt class="banner">
+    </div>
     <div class="title01 waper">
       <p class="zn">服务优势</p>
       <p class="xian"></p>
@@ -67,6 +70,19 @@ export default {
 .waper {
   width: 1280px;
   margin: 0 auto;
+}
+.banner {
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  height: 400px;
+  img {
+    position: absolute;
+    width: 1920px;
+    height: 400px;
+    left: 50%;
+    margin-left: -960px;
+  }
 }
 .content {
   .title01 {

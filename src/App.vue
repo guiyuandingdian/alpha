@@ -32,6 +32,7 @@ audio, video,textarea {
 body,html {
     line-height:1;
     min-height: 100%;
+    overflow-x: hidden;
 }
 a{
     margin:0;

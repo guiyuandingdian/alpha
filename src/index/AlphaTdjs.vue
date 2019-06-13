@@ -1,5 +1,9 @@
 <template>
+
   <div class="content">
+    <div class="banner">
+      <img src="../../static/img/banner.png" alt class="banner">
+    </div>
     <div class="title01 waper">
       <p class="zn">团队角色</p>
       <p class="xian"></p>
@@ -63,6 +67,19 @@ export default {
   width: 1280px;
   margin: 0 auto;
 }
+.banner {
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  height: 400px;
+  img {
+    position: absolute;
+    width: 1920px;
+    height: 400px;
+    left: 50%;
+    margin-left: -960px;
+  }
+}
 .content {
   .title01 {
     text-align: center;
@@ -92,6 +109,7 @@ export default {
     box-sizing: border-box;
     padding:0;
     margin-top: 110px;
+    background: url(../../static/img/tdjs06.png) no-repeat center;
     li {
       width: 130px;
       height: 130px;

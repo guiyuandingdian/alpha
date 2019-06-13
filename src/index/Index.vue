@@ -3,9 +3,7 @@
     <div class="tltle">
       <Tab-bar/>
     </div>
-    <div class="banner">
-      <BanNer></BanNer>
-    </div>
+    
     <div class="content">
       <router-view/>
     </div>

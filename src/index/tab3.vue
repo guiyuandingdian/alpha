@@ -38,9 +38,7 @@ export default {
     justify-content: space-between;
     margin-top: 97px;
     margin-bottom: 117px;
-    .iit {
-      border: 1px dashed #707070;
-    }
+
     .iits {
       padding-left: 102px;
       display: flex;

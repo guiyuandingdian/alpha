@@ -249,7 +249,9 @@ export default {
     }
   }
 }
-
+.k1{
+  margin-right: 16px;
+}
 .bj {
   background: #fafafa;
   .tupianwen {
