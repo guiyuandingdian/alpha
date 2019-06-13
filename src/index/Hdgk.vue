@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <img :src="tabs.img">
+    </div>
     <ul class="shenfen waper">
       <li
         v-for="(tab,index) in tabs"
@@ -7,8 +10,10 @@
         @click="toggle(index,tab.view)"
         :class="{active:active==index}"
       >
-        <span>{{tab.type}}<i></i></span>
-        
+        <span>
+          {{tab.type}}
+          <i></i>
+        </span>
       </li>
     </ul>
     <component :is="currentView"></component>
@@ -31,23 +36,28 @@ export default {
       tabs: [
         {
           type: "竞赛类",
-          view: "tabs1"
+          view: "tabs1",
+          img: "../../static/img/banner1.png"
         },
         {
           type: "服务类",
-          view: "tabs2"
+          view: "tabs2",
+          img: "../../static/img/banner1.png"
         },
         {
           type: "夏校类",
-          view: "tabs3"
+          view: "tabs3",
+          img: "../../static/img/banner1.png"
         },
         {
           type: "科研项目类",
-          view: "tabs4"
+          view: "tabs4",
+          img: "../../static/img/banner1.png"
         },
         {
           type: "兴趣类",
-          view: "tabs5"
+          view: "tabs5",
+          img: "../../static/img/banner1.png"
         }
       ]
     };
@@ -59,7 +69,7 @@ export default {
   methods: {
     toggle(i, v) {
       this.active = i;
-      this.currentView = v
+      this.currentView = v;
     }
   },
   components: {

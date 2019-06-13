@@ -79,14 +79,19 @@ export default {
 .warper {
   width: 100%;
   margin: 0 auto;
-  background: #000;
+  background: #1A1A1A;
   height: 100px;
 }
 .tabbar {
   width: 1440px;
   margin: 0 auto;
   .el-menu {
-    background: none;
+    background: none !important;
+    .el-menu-item{
+      color: #fff !important;
+      border-radius: 13px;
+      background: none !important;
+    }
   }
   .el-menu-item {
     height: 25px !important;
@@ -95,7 +100,7 @@ export default {
     margin: 0 16px;
     border-radius: 20px;
     color: #fff !important;
-    min-width: 118px !important;
+    min-width: 116px !important;
     box-sizing: border-box;
     text-align: center;
   }
@@ -106,7 +111,8 @@ export default {
     border-radius: 20px;
     color: #fff !important;
     .el-menu-item {
-      color: #000 !important;
+      color: #fff !important;
+      padding: 0 !important;
     }
   }
   .dhlan {
@@ -130,11 +136,11 @@ export default {
     }
   }
   .el-submenu__title {
-  height: 25px !important;
-  line-height: 25px !important;
-  border: none !important;
-  border-radius: 20px;
-}
+    height: 25px !important;
+    line-height: 25px !important;
+    border: none !important;
+    border-radius: 20px;
+  }
 }
 
 .el-menu.el-menu--horizontal {
@@ -156,7 +162,7 @@ export default {
   font-size: 26px;
   line-height: 56px;
   height: 56px;
-  color: #4d4d4d !important;
+  color: #7d1111 !important;
   width: 50% !important;
   padding: 0 !important;
 }
@@ -165,7 +171,7 @@ export default {
   vertical-align: middle;
 }
 .el-tabs__item:hover {
-  color: #4d4d4d !important;
+  color: #7d1111 !important;
 }
 .el-tabs__active-bar {
   background-color: #7d1111;
@@ -204,13 +210,41 @@ export default {
 }
 .el-menu--collapse .el-menu .el-submenu,
 .el-menu--popup {
-  min-width: 116px !important;
+  min-width: 118px !important;
+  background: none !important; 
 }
 .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
   background-color: #fe3339 !important;
   color: #fff !important;
 }
-.el-icon-arrow-down:before{
+.el-icon-arrow-down:before {
   color: #fff;
+}
+.el-menu--horizontal{
+  padding: 0 !important;
+}
+.el-menu--horizontal .el-menu .el-menu-item{
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  height: 25px !important;
+  line-height: 25px !important;
+  margin-bottom: 10px;
+  text-align: center !important;
+}
+.el-menu--horizontal .el-menu .el-menu-item:hover{
+
+  background: #fe3339 !important;
+}
+.el-menu--horizontal .el-menu .el-menu-item.is-active{
+
+  background: #fe3339 !important;
+  color: #FFF !important;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__title{
+  background: none !important;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover{
+  background: #fe3339 !important;
+  color: #FFF !important;
 }
 </style>

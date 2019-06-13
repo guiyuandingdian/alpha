@@ -12,87 +12,177 @@ export default {
 
 <style>
 /* CSS Document */
-html, body, div, span, object, iframe,h1, h2, 
-h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, 
-em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, 
-ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
-tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
-figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
-audio, video,textarea {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-    outline-style:none;/*FF*/ 
-    font-family: "Segoe UI" "微软雅黑", "黑体", "宋体"
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline-style: none; /*FF*/
+  font-family: "Segoe UI" "微软雅黑", "黑体", "宋体";
 }
-body,html {
-    line-height:1;
-    min-height: 100%;
-    overflow-x: hidden;
+body,
+html {
+  line-height: 1;
+  min-height: 100%;
+  overflow-x: hidden;
 }
-a{
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;    
-    text-decoration:none
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
 }
 
-input:-webkit-autofill,select:-webkit-autofill {  
-    -webkit-box-shadow: 0 0 0px 1000px white  inset !important;  
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
-input{
-    outline-color: invert ;
-	outline-style: none ;
-	outline-width: 0px ;
-	border: none ;
-	border-style: none ;
-	text-shadow: none ;
-	-webkit-appearance: none ;
-	-webkit-user-select: text ;
-	outline-color: transparent ;
-	box-shadow: none;
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0px;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
 }
-input,button,select,textarea{outline:none}
-textarea{resize:none;border: none;
-    height: 52px;
-    line-height: 22px;display: block;text-align: right;width: 100%;box-sizing: border-box;padding: 14px 16px;font-size: 16px;color: #999999;}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+textarea {
+  resize: none;
+  border: none;
+  height: 52px;
+  line-height: 22px;
+  display: block;
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #999999;
+}
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
-
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-input, select {vertical-align:middle;}
-button{margin: 0;
-    padding: 0;
-    outline: none; border:none;background: none;}
+input,
+select {
+  vertical-align: middle;
+}
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+}
 /*css为clearfix，清除浮动*/
 .clearfix::before,
-.clearfix::after{
-    content: "";
-    height: 0;
-    line-height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
+.clearfix::after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
 }
-.clearfix:after{clear:both;} 
-.clearfix{ 
-    *zoom:1;/*IE/7/6*/
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*IE/7/6*/
 }
 /* ul */
-ul{list-style: none;}
-#gouerzi .el-menu-item-group__title{
+ul {
+  list-style: none;
+}
+#gouerzi .el-menu-item-group__title {
   padding: 0 !important;
 }
-.waper{
+.waper {
   width: 1280px;
   margin: 0 auto;
 }

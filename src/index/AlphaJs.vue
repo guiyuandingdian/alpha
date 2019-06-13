@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="banner">
-      <img src="../../static/img/banner1.png" alt class="banner">
+      <img src="../../static/img/banner1.png">
     </div>
     <div class="title01 waper">
       <p class="zn">项目亮点</p>
