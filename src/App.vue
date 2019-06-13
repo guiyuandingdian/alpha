@@ -95,8 +95,5 @@ ul{list-style: none;}
   width: 1280px;
   margin: 0 auto;
 }
-.flex{
-    display: flex;
-    display: -webkit-flex;
-}
+
 </style>

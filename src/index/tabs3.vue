@@ -52,6 +52,95 @@
         <p>科技产业巨头就在我们的后院。皮克斯位于附近的埃默里维尔，而旧金山是Twitter、Salesforce、Yelp、Reddit和airbnb的公司总部所在地。参加一个会议，了解那些走在科技创新前沿的人。</p>
       </li>
     </ul>
+    <div class="waper xuexa">
+      <p class="bt">大学学分夏校课程（部分）</p>
+      <p class="xian"></p>
+    </div>
+    <ul class="flex waper kebi">
+      <li>
+        <img src="../../static/img/xx06.png" alt>
+        <div class="ct">
+          <p class="xm">宾夕法尼亚大学</p>
+          <p class="xk">经济学、英文</p>
+        </div>
+      </li>
+      <li>
+        <img src="../../static/img/xx07.png" alt>
+      </li>
+      <li>
+        <img src="../../static/img/xx08.png" alt>
+        <div class="ct">
+          <p class="xm">加州大学洛杉矶分校</p>
+          <p class="xk">传播学研究、哲学</p>
+        </div>
+      </li>
+      <li>
+        <img src="../../static/img/xx09.png" alt>
+      </li>
+      <li>
+        <img src="../../static/img/xx10.png" alt>
+        <div class="ct">
+          <p class="xm">约翰斯霍普金斯大学</p>
+          <p class="xk">生物学</p>
+        </div>
+      </li>
+      <li>
+        <img src="../../static/img/xx11.png" alt>
+      </li>
+      <li>
+        <img src="../../static/img/xx12.png" alt>
+        <div class="ct">
+          <p class="xm">加州大学伯克利分校</p>
+          <p class="xk">经济学</p>
+        </div>
+      </li>
+      <li>
+        <img src="../../static/img/xx13.png" alt>
+      </li>
+      <li>
+        <img src="../../static/img/xx14.png" alt>
+        <div class="ct">
+          <p class="xm">斯坦福大学</p>
+          <p class="xk">数学、计算机</p>
+        </div>
+      </li>
+      <li>
+        <img src="../../static/img/xx15.png" alt>
+      </li>
+    </ul>
+    <div class="waper xuexa xuexas">
+      <p class="bt">研究项目</p>
+      <p class="xian"></p>
+    </div>
+    <div class="dibu">
+      <div class="waper gelia flex">
+        <div class="flex rre">
+          <div class="tuant">
+            <div>
+              <img src="../../static/img/xx16.png" alt>
+            </div>
+            <i class="yuan"></i>
+          </div>
+          <div class="xuemi">
+            <p>加州大学洛杉矶分校</p>
+            <p>商业创新研究会</p>
+          </div>
+        </div>
+        <div class="flex rre">
+          <div class="tuant ">
+            <div>
+              <img src="../../static/img/xx17.png" alt>
+            </div>
+            <i class="yuan"></i>
+          </div>
+          <div class="xuemi">
+            <p>德克萨斯大学奥斯汀分校</p>
+            <p>邢事司法学会</p>
+          </div>
+        </div>
+      </div>
+      <div class="sekuai"></div>
+    </div>
   </div>
 </template>
 
@@ -62,6 +151,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+ .flex{
+    display: flex;
+    display: -webkit-flex;
+} 
 .qq {
   width: 1280px;
   height: 400px;
@@ -148,6 +241,7 @@ export default {
 }
 .cenrs {
   background: #f0f0f0;
+  margin-bottom: 80px;
 }
 .center {
   display: flex;
@@ -212,7 +306,7 @@ export default {
         .left {
           left: 0;
         }
-        .right{
+        .right {
           right: 0;
         }
       }
@@ -228,5 +322,114 @@ export default {
       margin-bottom: 45px;
     }
   }
+}
+.xuexa {
+  margin-bottom: 70px;
+  .bt {
+    font-size: 28px;
+    font-family: Segoe UI;
+    font-weight: bold;
+    line-height: 37px;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+  }
+  .xian {
+    width: 51px;
+    height: 3px;
+    background: rgba(254, 51, 57, 1);
+    margin: 0 auto;
+    margin-top: 13px;
+  }
+}
+.kebi {
+  flex-wrap: wrap;
+  li {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    .ct {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      line-height: 24px;
+      text-align: center;
+      .xm {
+        font-size: 18px;
+        padding-top: 89px;
+        font-weight: bold;
+        margin-bottom: 13px;
+      }
+      .xk {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.dibu {
+  position: relative;
+  margin-bottom: 158px;
+  .sekuai{
+    position: absolute;
+    width: 100%;
+    height: 188px;
+    top: 125px;
+    background: #fafafa;
+  }
+}
+.rre{
+  align-items: flex-end;
+}
+.gelia {
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  .tuant {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin-right: 87px;
+    margin-left: 34px;
+    .yuan {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      top: 0;
+      left: 20px;
+      background: #fafafa;
+    }
+    div {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .xuemi {
+    width: 256px;
+    p {
+      &:nth-child(1) {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(112, 112, 112, 1);
+      }
+      &:nth-child(2) {
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+.xuexas{
+  margin-bottom: 100px;
+  margin-top: 80px;
 }
 </style>
