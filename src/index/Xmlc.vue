@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="banner">
-      <img src="../../static/img/banner.png" alt class="banner">
+      <img src="../../static/img/banner08.png" alt class="banner">
+      <i></i>
     </div>
     <ul class="shenfen waper">
       <li
@@ -74,6 +75,17 @@ export default {
     height: 400px;
     left: 50%;
     margin-left: -960px;
+  }
+  i {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
   }
 }
 .xianss {

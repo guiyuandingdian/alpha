@@ -2,7 +2,7 @@
 
   <div class="content">
     <div class="banner">
-      <img src="../../static/img/banner.png" alt class="banner">
+      <img src="../../static/img/banner3.png" alt class="banner">
     </div>
     <div class="title01 waper">
       <p class="zn">团队角色</p>

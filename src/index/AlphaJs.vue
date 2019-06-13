@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="banner">
-      <img src="../../static/img/banner.png" alt class="banner">
+      <img src="../../static/img/banner1.png" alt class="banner">
     </div>
     <div class="title01 waper">
       <p class="zn">项目亮点</p>
@@ -169,6 +169,8 @@ export default {
         height: 120px;
         display: flex;
         align-items: center;
+        font-size: 14px;
+        line-height: 24px;
         .wrs {
           text-align: right !important;
           display: block;
@@ -293,10 +295,10 @@ export default {
         box-sizing: border-box;
         padding: 15px;
         background: #fe3339;
-        font-size: 14px;
+        font-size: 14px !important;
         font-family: Segoe UI;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 24px !important;
         color: rgba(255, 255, 255, 1);
       }
     }

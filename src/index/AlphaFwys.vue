@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="banner">
-      <img src="../../static/img/banner.png" alt class="banner">
+      <img src="../../static/img/banner2.png" alt class="banner">
     </div>
     <div class="title01 waper">
       <p class="zn">服务优势</p>
