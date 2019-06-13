@@ -91,4 +91,12 @@ ul{list-style: none;}
 #gouerzi .el-menu-item-group__title{
   padding: 0 !important;
 }
+.waper{
+  width: 1280px;
+  margin: 0 auto;
+}
+.flex{
+    display: flex;
+    display: -webkit-flex;
+}
 </style>
