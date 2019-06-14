@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="dibutu">
-      <img src="../../static/img/sjgh07.png" alt>
+      <img src="../../static/img/sjgh16.png" alt>
       <i></i>
     </div>
   </div>

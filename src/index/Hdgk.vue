@@ -1,7 +1,14 @@
 <template>
   <div>
-    <div>
-      <img :src="tabs.img">
+    <div class="banner">
+      <img
+        :src="tab.img"
+        v-for="(tab,index) in tabs"
+        :key="index"
+        @click="toggle(index,tab.view)"
+        :class="{active:active==index}"
+      >
+      <i></i>
     </div>
     <ul class="shenfen waper">
       <li
@@ -37,27 +44,27 @@ export default {
         {
           type: "竞赛类",
           view: "tabs1",
-          img: "../../static/img/banner1.png"
+          img: "../../static/img/banner.png"
         },
         {
           type: "服务类",
           view: "tabs2",
-          img: "../../static/img/banner1.png"
+          img: "../../static/img/banner4.png"
         },
         {
           type: "夏校类",
           view: "tabs3",
-          img: "../../static/img/banner1.png"
+          img: "../../static/img/banner8.png"
         },
         {
           type: "科研项目类",
           view: "tabs4",
-          img: "../../static/img/banner1.png"
+          img: "../../static/img/banner6.png"
         },
         {
           type: "兴趣类",
           view: "tabs5",
-          img: "../../static/img/banner1.png"
+          img: "../../static/img/banner7.png"
         }
       ]
     };
@@ -86,6 +93,32 @@ export default {
 .waper {
   width: 1280px;
   margin: 0 auto;
+}
+.banner {
+  position: relative;
+  height: 400px;
+  i {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.banner img {
+  display: none;
+}
+.banner .active {
+  display: block;
+  position: absolute;
+  width: 1920px;
+  height: 400px;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
 }
 .shenfen {
   display: flex;

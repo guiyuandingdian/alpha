@@ -51,11 +51,11 @@
           </div>
           <div class="flex left">
             <div class="k k1 k2">
-              <img src="../../static/img/hdgk03.png" alt>
-              <img src="../../static/img/hdgk04.png" alt>
+              <img src="../../static/img/hdgk05.png" alt>
+              <img src="../../static/img/hdgk15.png" alt>
             </div>
             <div class="k">
-              <img src="../../static/img/hdgk02.png" alt>
+              <img src="../../static/img/hdgk06.png" alt>
             </div>
           </div>
         </div>
@@ -180,6 +180,7 @@
         </div>
         <div>
           <img src="../../static/img/hdgk12.png" alt="">
+           <i class="zhezhao"></i>
         </div>
       </div>
     </div>

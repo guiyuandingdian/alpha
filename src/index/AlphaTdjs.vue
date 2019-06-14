@@ -3,6 +3,7 @@
   <div class="content">
     <div class="banner">
       <img src="../../static/img/banner3.png" alt class="banner">
+      <i></i>
     </div>
     <div class="title01 waper">
       <p class="zn">团队角色</p>
@@ -78,6 +79,16 @@ export default {
     height: 400px;
     left: 50%;
     margin-left: -960px;
+  }
+  i {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
   }
 }
 .content {
