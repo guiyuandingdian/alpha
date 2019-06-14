@@ -109,9 +109,7 @@ a {
 }
 
 input:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-}
+
 input {
   outline-color: invert;
   outline-style: none;
@@ -186,5 +184,4 @@ ul {
   width: 1280px;
   margin: 0 auto;
 }
-
 </style>

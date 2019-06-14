@@ -10,9 +10,7 @@
       background-color="#7D1111"
       text-color="#FAF6D0"
       active-text-color="#fff"
-      @open="handleOpen"
-      @close="handleClose"
-      unique-opened="true"
+
     >
       <el-submenu index="1">
         <template slot="title">
@@ -63,23 +61,8 @@
 <script>
 export default {
   name: "HomeLeft",
-  props: {},
-  data() {
-    return {};
-  },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
-  methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
-    }
-  },
-  components: {}
+  props: {}
+  
 };
 </script>
 

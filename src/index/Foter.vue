@@ -1,12 +1,12 @@
 <template>
   <div class="Foter">
     <el-row>
-      <el-col :span="8">
+      <el-col :span="7">
         <div class="grid-content">
           <img src="../../static/img/logo4.png" alt>
         </div>
       </el-col>
-      <el-col :span="8">
+      <el-col :span="10">
         <div class="grid-content">
           <el-row class="text">
             <el-col :span="11" class="right">
@@ -23,7 +23,7 @@
           <p>Copyright &#169 2010-2019 爱尔发留学 备案号：沪ICP备19009338号-2</p>
         </div>
       </el-col>
-      <el-col :span="8">
+      <el-col :span="7">
         <div class="grid-content">
           <img src="../../static/img/ewm.png" alt>
         </div>

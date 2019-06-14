@@ -9,6 +9,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import "babel-polyfill"
 import store from './store/store'
+import md5 from 'js-md5';
+Vue.prototype.$md5 = md5;
 
 
 const baseUrlAddr = 'http://localhost:8085'

@@ -40,16 +40,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .wapper {
   background: #e6e6e6;
 }
 .shikou {
-  border-radius:10px;
+  border-radius: 10px;
   background: #fff;
   padding: 28px 67px;
   box-sizing: border-box;
+  min-width: 1095px;
+  min-height: 728px;
 }
-.el-header{
+.el-header {
   background: #fff;
 }
 </style>

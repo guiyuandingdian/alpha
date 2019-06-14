@@ -108,7 +108,7 @@ const router = new Router({
       component: Home,
       redirect: '/Home/Bzlc',
       meta: {
-        outh: true
+        requireAuth: true
       },
       children: [
         {
@@ -129,7 +129,7 @@ const router = new Router({
           path: 'Ypgb',
           component: Ypgb,
           meta:{
-            title:'预评估表'
+            title:'预评估表_Pre－Assessment Form'
           }
         },
         {
