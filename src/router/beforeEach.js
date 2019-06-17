@@ -1,5 +1,5 @@
 export default (to, from, next) => {
-  if (to.matched.some(route => route.meta.requireAuths)) {
+  if (to.matched.some(route => route.meta.requireAuth)) {
 
     next('/Login')
   } else {
