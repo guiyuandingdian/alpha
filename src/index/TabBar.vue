@@ -23,7 +23,7 @@
               active-text-color="#333"
               background-color="#000"
             >
-              <el-menu-item index="/indexs">首页</el-menu-item>
+              <el-menu-item index="/index">首页</el-menu-item>
               <el-submenu index="/AlphaJs">
                 <template slot="title">关于ALPHA</template>
                 <el-menu-item index="/AlphaJs">ALPHA项目介绍</el-menu-item>
@@ -46,7 +46,7 @@
           </div>
         </el-col>
         <el-col :span="4" class="denglo">
-          <router-link to="/Home" class="lgo">登录注册</router-link>
+          <!-- <router-link to="/Home" class="lgo">登录注册</router-link> -->
         </el-col>
       </el-row>
     </div>
@@ -246,5 +246,8 @@ export default {
 .el-menu--horizontal>.el-submenu .el-submenu__title:hover{
   background: #fe3339 !important;
   color: #FFF !important;
+}
+.tabbar .el-menu.el-menu--horizontal{
+  border: none !important;
 }
 </style>

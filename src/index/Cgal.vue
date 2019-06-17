@@ -352,7 +352,7 @@ export default {
     }
   }
   .set {
-    display: none;
+    display: none !important;
   }
 }
 .weqwe {
@@ -398,6 +398,9 @@ export default {
     &:nth-child(2n) {
       background: #fafafa;
     }
+  }
+  .set {
+    display: none !important;
   }
 }
 </style>
