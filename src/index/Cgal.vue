@@ -67,7 +67,7 @@
       </li>
       <li v-for="(item, index) in list" :key="index" :class="[{'set': item.type === 1}]">
         <span>{{item.name}}</span>
-        <span>{{item.scholl}}</span>
+        <span>{{item.school}}</span>
         <span>{{item.gpa}}</span>
         <span>{{item.toefl}}</span>
         <span>{{item.ielts}}</span>
