@@ -23,7 +23,7 @@
               active-text-color="#333"
               background-color="#000"
             >
-              <el-menu-item index="/index">首页</el-menu-item>
+              <el-menu-item index="/indexs">首页</el-menu-item>
               <el-submenu index="/AlphaJs">
                 <template slot="title">关于ALPHA</template>
                 <el-menu-item index="/AlphaJs">ALPHA项目介绍</el-menu-item>

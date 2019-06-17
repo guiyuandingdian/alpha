@@ -107,8 +107,8 @@ export default {
           type: 1
         },
         {
-          imgs: "../../static/img/cg03s.png",
-          img: "../../static/img/cg03s.png",
+          imgs: "../../static/img/cg03.png",
+          img: "../../static/img/cg03.png",
           name: "X同学zhiyi",
           school: "/",
           gpa: "3.9",
@@ -118,8 +118,8 @@ export default {
           type: 1
         },
         {
-          imgs: "../../static/img/cg04s.png",
-          img: "../../static/img/cg04s.png",
+          imgs: "../../static/img/cg04.png",
+          img: "../../static/img/cg04.png",
           name: "X同学zhiyi",
           school: "/",
           gpa: "3.85",
@@ -129,8 +129,8 @@ export default {
           type: 1
         },
         {
-          imgs: "../../static/img/cg05s.png",
-          img: "../../static/img/cg05s.png",
+          imgs: "../../static/img/cg05.png",
+          img: "../../static/img/cg05.png",
           name: "吴同学",
           school: "美国康奈尔大学",
           gpa: "3.9",
@@ -140,8 +140,8 @@ export default {
           type: 1
         },
         {
-          imgs: "../../static/img/cg06s.png",
-          img: "../../static/img/cg06s.png",
+          imgs: "../../static/img/cg06.png",
+          img: "../../static/img/cg06.png",
           name: "黄同学",
           school: "美国康奈尔大学",
           gpa: "4",
@@ -173,8 +173,8 @@ export default {
           type: 0
         },
         {
-          imgs: "../../static/img/cg09s.png",
-          img: "../../static/img/cg09s.png",
+          imgs: "../../static/img/cg09.png",
+          img: "../../static/img/cg09.png",
           name: "Yifei",
           school: "罗切斯特大学",
           gpa: "3.8",
