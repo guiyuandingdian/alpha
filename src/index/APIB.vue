@@ -42,27 +42,121 @@
     <div class="waper">
       <p class="tpb">课程体系-A-Level</p>
       <i class="hsxian"></i>
-      <p>选择学习Alevel意味着对于选择大学时会受益于专家的建议和在校学习期间的校园访问。你可以申请包括牛津，剑桥，LSW，帝国理工，UCL在内的任意英国大学院校。并且从申请院校到进入大学，你所选择合适的科目会支撑你对学业和职业的抱负。</p>
-      <img src="../../static/img/apib03.png" alt>
-      <p>
-        选择Alevel的学科是一个复杂的过程。大学想录取的学生除了有优秀的成绩以外，还要求这些优秀的成绩是来自对应他们申请专业的科目。如果你已经明确大学想修的专业，那你应该考虑选择什么的学科学习会在最大程度上为你以后的专业做准备。但是如果你还没明确以后学习的专业，那么去选择一些会适合很多不同专业的科目很重要。很多大学的课程是建立在学生在高中学到的知识和技能的基础上的。因此，一些大学课程要求你已经学过某一特定的科目。例如，对于一般工程学位，数学和物理通常是基本的A-level资格。
-        一些进阶难度的课程比其他课程会更频繁的被大学要求为录入学位的要求。我们把这些科目称为促进科目，因为当你选择这些科目的进阶难度会为你在大学专业选择上留下了广泛的选择。
-      </p>
-      <p>而这些促进科目为：</p>
+      <p
+        class="xzxx"
+      >选择学习Alevel意味着对于选择大学时会受益于专家的建议和在校学习期间的校园访问。你可以申请包括牛津，剑桥，LSW，帝国理工，UCL在内的任意英国大学院校。并且从申请院校到进入大学，你所选择合适的科目会支撑你对学业和职业的抱负。</p>
+      <img src="../../static/img/apib03.png" class="tps">
+      <p
+        class="wd"
+      >选择Alevel的学科是一个复杂的过程。大学想录取的学生除了有优秀的成绩以外，还要求这些优秀的成绩是来自对应他们申请专业的科目。如果你已经明确大学想修的专业，那你应该考虑选择什么的学科学习会在最大程度上为你以后的专业做准备。但是如果你还没明确以后学习的专业，那么去选择一些会适合很多不同专业的科目很重要。很多大学的课程是建立在学生在高中学到的知识和技能的基础上的。因此，一些大学课程要求你已经学过某一特定的科目。例如，对于一般工程学位，数学和物理通常是基本的A-level资格。</p>
+      <p
+        class="wds wd"
+      >一些进阶难度的课程比其他课程会更频繁的被大学要求为录入学位的要求。我们把这些科目称为促进科目，因为当你选择这些科目的进阶难度会为你在大学专业选择上留下了广泛的选择。</p>
+      <p class="hsz">而这些促进科目为：</p>
+    </div>
+    <div class="dibutu">
+      <img src="../../static/img/apib04.png" alt>
+      <i></i>
+      <div class="waper biao">
+        <table>
+          <tr>
+            <td class="lnonf">
+              Biology
+              <br>生物
+            </td>
+            <td >
+              Modern and Classical Languages
+              <br>现代和经典语言
+            </td>
+            <td>
+              Chemistry
+              <br>化学
+            </td>
+            <td class="rnonf">
+              Geography
+              <br>地理
+            </td>
+          </tr>
+          <tr>
+            <td class="lnonf">
+              English Language & Literature
+              <br>英文语言及文学
+            </td>
+            <td>
+              Physics
+              <br>物理
+            </td>
+            <td>
+              History
+              <br>历史
+            </td>
+            <td class="rnonf">
+              Maths and Further Maths
+              <br>数学和进阶数学
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "APIB",
-}
+  name: "APIB"
+};
 </script>
 
 <style scoped lang="scss">
 .waper {
   width: 1280px;
   margin: 0 auto;
+  .tpb {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 37px;
+    color: rgba(51, 51, 51, 1);
+    text-align: center;
+    margin-top: 100px;
+  }
+  .hsxian {
+    display: block;
+    width: 51px;
+    height: 0px;
+    border: 3px solid rgba(254, 51, 57, 1);
+    margin: 0 auto;
+    margin-top: 13px;
+  }
+  .xzxx {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 1);
+    margin-top: 62px;
+  }
+  .tps {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .wd {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 1);
+    margin-top: 40px;
+    margin-bottom: 13px;
+  }
+  .hsz {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: rgba(254, 51, 57, 1);
+    margin-top: 27px;
+  }
+  .wds {
+    margin-top: 0;
+  }
 }
 .banner {
   font-size: 0;
@@ -123,7 +217,6 @@ export default {
     }
   }
 }
-
 .bt {
   font-size: 14px;
   font-family: Segoe UI;
@@ -183,6 +276,70 @@ export default {
       padding-left: 50px;
       text-align: justify;
       margin-top: 50px;
+    }
+  }
+}
+.dibutu {
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  margin-bottom: 100px;
+  margin-top: 40px;
+  padding-top: 50px;
+  img {
+    position: absolute;
+    width: 1920px;
+    height: 500px;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+  }
+  i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .biao {
+    position: relative;
+    z-index: 2;
+    width: 1140px;
+    height: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 20px;
+    table {
+      width: 100%;
+      tr {
+        td {
+          width: 25%;
+          padding: 66px 0;
+          border: 1px solid rgba(255, 255, 255, 0.8);
+          color: #fff;
+          font-size: 18px;
+          text-align: center;
+          line-height: 24px;
+        }
+        &:nth-child(1) {
+          td {
+            border-top: none;
+          }
+        }
+        &:nth-child(2) {
+          td {
+            border-bottom: none;
+          }
+        }
+        .lnonf {
+          border-left: none;
+        }
+        .rnonf {
+          border-right: none;
+        }
+      }
     }
   }
 }
