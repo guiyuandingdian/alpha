@@ -30,7 +30,7 @@
                 <el-menu-item index="/AlphaTdjs">ALPHA团队介绍</el-menu-item>
               </el-submenu>
               <el-submenu index="/Xmlc">
-                <template slot="title">课程体系</template>
+                <template slot="title">项目服务</template>
                 <el-menu-item index="/Xmlc">项目流程</el-menu-item>
                 <el-menu-item index="/Hdgk">活动概览</el-menu-item>
               </el-submenu>

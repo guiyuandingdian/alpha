@@ -14,7 +14,14 @@
     "stompjs": "^2.3.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.1.1"
+    "vuex": "^3.1.1",
+    "js-yaml": ">=3.13.1",
+    "webpack-bundle-analyzer": ">=3.3.2",
+    "axios": ">=0.18.1",
+    "morgan": ">=1.9.1",
+    "webpack-dev-server": ">=3.1.11",
+    "jquery": ">=3.4.0",
+    "handlebars": ">=4.0.14"
   },
   "devDependencies": {
     "ajv": "^6.5.5",
