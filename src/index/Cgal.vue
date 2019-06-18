@@ -295,16 +295,16 @@ export default {
   justify-content: space-between;
   margin-top: 100px;
   .xuexiao {
-    width: 600px;
+    width: 400px;
     background: rgba(242, 242, 242, 1);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
     margin-bottom: 100px;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     .tupian {
       a {
         display: block;
-        height: 500px;
+        height: 400px;
         font-size: 0;
         line-height: 0;
         overflow: hidden;
@@ -314,12 +314,12 @@ export default {
         }
       }
       .wb {
-        height: 200px;
+        height: 320px;
         text-align: center;
         background: #f2f2f2;
         color: #333333;
         .wp {
-          width: 420px;
+          width: 400px;
           margin: 0 auto;
         }
         .bitao {
@@ -339,7 +339,7 @@ export default {
           padding: 20px 0;
         }
         .zhen {
-          padding: 0 90px;
+          padding: 0 20px;
           background: #fff;
           line-height: 40px;
           font-size: 16px;
@@ -348,7 +348,7 @@ export default {
       }
     }
     &:hover {
-      height: 700px;
+      height: 600px;
     }
   }
   .set {

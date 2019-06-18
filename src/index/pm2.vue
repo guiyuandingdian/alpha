@@ -1,18 +1,19 @@
 <template>
   <div class="waper">
-    <p class="xian"></p>
+    <p class="xian waper"></p>
     <ul>
       <li class="head">
         <span>排名</span>
         <span>学校</span>
         <span>地区</span>
         <span>性质</span>
-        <span>性质报名</span>
         <span>报名截止日期</span>
-        <span>本科入学</span>
         <span>总入学人数</span>
+        
         <span>学费</span>
+        <span>食宿</span>
         <span>师生比例</span>
+        <span>姓别</span>
         <span>班级规模学生比例</span>
       </li>
       <li v-for="(item, index) in tableData" :key="index">
@@ -20,12 +21,12 @@
         <span>{{item.scholl}}</span>
         <span>{{item.city}}</span>
         <span>{{item.xingzhi}}</span>
-        <span>{{item.riqi}}</span>
-        <span>{{item.jzrq}}</span>
         <span>{{item.bkrx}}</span>
         <span>{{item.riqi}}</span>
         <span>{{item.shisu}}</span>
         <span>{{item.ssbl}}</span>
+        <span>{{item.ssbls}}</span>
+        <span>{{item.xb}}</span>
         <span>{{item.bjxsbl}}</span>
       </li>
     </ul>
@@ -44,17 +45,18 @@ export default {
     return {
       tableData: [
         {
-          num: "1",
-          scholl: "Williams College",
-          city: "Williamstown, Massachusetts; Rural",
-          xingzhi: "Private ",
-          riqi: "15%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "2,117",
-          many: "$55,450 ",
-          shisu: "$14,500",
-          ssbl: "7:01",
-          bjxsbl: "<20    76.3%;  20 - 49    21.7%;  >50    2%"
+          num: "1", //排名
+          scholl: "Williams College", //学校
+          city: "Williamstown, Massachusetts; Rural", //地区
+          xingzhi: "Private ",    //性质
+          riqi: "15%",  //录取率
+          bkrx: "Jan.1;Nov.15", //报名时间
+          riqi: "2,117",  //人数
+          shisu: "$55,450 ", //学费
+          ssbl: "$14,500",  // 食宿
+          ssbls: "7:01",  // 师生比例
+          bjxsbl: "<20    76.3%;  20 - 49    21.7%;  >50    2%", //班级学生比例
+          xb: "Both" //姓别
         },
         {
           num: "2",
@@ -62,12 +64,13 @@ export default {
           city: "Amherst, Massachusetts; Rural",
           xingzhi: "Private ",
           riqi: "13%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: " 1,836",
-          many: "$56,426",
-          shisu: "$14,740",
-          ssbl: "8:01",
-          bjxsbl: "<20    70.5%;  20 - 49    26.7%;  >50    2.8%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: " 1,836",
+          shisu: "$56,426",
+          ssbl: "$14,740",
+          ssbls: "8:01",
+          bjxsbl: "<20    70.5%;  20 - 49    26.7%;  >50    2.8%",
+          xb: "Both"
         },
         {
           num: "3",
@@ -75,12 +78,13 @@ export default {
           city: "Swarthmore, Pennsylvania; Suburban",
           xingzhi: "Private ",
           riqi: "11%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "1,577",
-          many: "$52,588",
-          shisu: "$15,474 ",
-          ssbl: "8:01",
-          bjxsbl: "<20    73.5%;  20 - 49    23.8%;  >50    2.7%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "1,577",
+          shisu: "$52,588",
+          ssbl: "$15,474 ",
+          ssbls: "8:01",
+          bjxsbl: "<20    73.5%;  20 - 49    23.8%;  >50    2.7%",
+          xb: "Both"
         },
         {
           num: "3",
@@ -88,12 +92,13 @@ export default {
           city: " Wellesley, Massachusetts; Suburban",
           xingzhi: "Private ",
           riqi: "22%",
-          jzrq: "Jan.15;Nov.1",
-          bkrx: "2,508",
-          many: "$53,732",
-          shisu: "$16,468 ",
-          ssbl: "7:01",
-          bjxsbl: "<20    70.3%;  20 - 49    29.5%;  >50    0.2%"
+          bkrx: "Jan.15;Nov.1",
+          riqi: "2,508",
+          shisu: "$53,732",
+          ssbl: "$16,468 ",
+          ssbls: "7:01",
+          bjxsbl: "<20    70.3%;  20 - 49    29.5%;  >50    0.2%",
+          xb: "Female"
         },
         {
           num: "5",
@@ -101,12 +106,13 @@ export default {
           city: "Brunswick, Maine; Suburban",
           xingzhi: "Private ",
           riqi: "14%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "1,816",
-          many: "$53,922",
-          shisu: "$14,698 ",
-          ssbl: "9:01",
-          bjxsbl: "<20    66.3%;  20 - 49    31.4%;  >50    2.2%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "1,816",
+          shisu: "$53,922",
+          ssbl: "$14,698 ",
+          ssbls: "9:01",
+          bjxsbl: "<20    66.3%;  20 - 49    31.4%;  >50    2.2%",
+          xb: "Both"
         },
         {
           num: "5",
@@ -114,12 +120,13 @@ export default {
           city: "Northfield, Minnesota; Rural",
           xingzhi: "Private ",
           riqi: "21%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,078",
-          many: "$54,759 ",
-          shisu: "$14,085",
-          ssbl: "9:01",
-          bjxsbl: "<20    69.6%;  20 - 49    29.8%;  >50    0.5%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,078",
+          shisu: "$54,759 ",
+          ssbl: "$14,085",
+          ssbls: "9:01",
+          bjxsbl: "<20    69.6%;  20 - 49    29.8%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "5",
@@ -127,12 +134,13 @@ export default {
           city: "Middlebury, Vermont; Rural",
           xingzhi: "Private ",
           riqi: "17%",
-          jzrq: "Jan.1;Nov.1",
-          bkrx: "2,603",
-          many: "$54,450",
-          shisu: "$15,530",
-          ssbl: "8:01",
-          bjxsbl: "<20    67.2%;  20 - 49    31.4%;  >50    1.3%"
+          bkrx: "Jan.1;Nov.1",
+          riqi: "2,603",
+          shisu: "$54,450",
+          ssbl: "$15,530",
+          ssbls: "8:01",
+          bjxsbl: "<20    67.2%;  20 - 49    31.4%;  >50    1.3%",
+          xb: "Both"
         },
         {
           num: "5",
@@ -140,12 +148,13 @@ export default {
           city: "Claremont, California; Suburban",
           xingzhi: "Private ",
           riqi: "8%",
-          jzrq: "Jan.1;Nov.1",
-          bkrx: "1,703",
-          many: "$52,780",
-          shisu: "$16,716 ",
-          ssbl: "8:01",
-          bjxsbl: "<20       71%;  20 - 49    28.4%;  >50    0.5%"
+          bkrx: "Jan.1;Nov.1",
+          riqi: "1,703",
+          shisu: "$52,780",
+          ssbl: "$16,716 ",
+          ssbls: "8:01",
+          bjxsbl: "<20       71%;  20 - 49    28.4%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "9",
@@ -153,12 +162,13 @@ export default {
           city: "Claremont, California; Suburban",
           xingzhi: "Private ",
           riqi: "10%",
-          jzrq: "Jan.5;Nov.1",
-          bkrx: "1,345",
-          many: "$54,405",
-          shisu: "$16,705",
-          ssbl: "8:01",
-          bjxsbl: "<20    66.3%;  20 - 49    31.4%;  >50    2.2%"
+          bkrx: "Jan.5;Nov.1",
+          riqi: "1,345",
+          shisu: "$54,405",
+          ssbl: "$16,705",
+          ssbls: "8:01",
+          bjxsbl: "<20    66.3%;  20 - 49    31.4%;  >50    2.2%",
+          xb: "Both"
         },
         {
           num: "10",
@@ -166,12 +176,13 @@ export default {
           city: "Davidson, North Carolina;Suburban ",
           xingzhi: "Private ",
           riqi: "20%",
-          jzrq: "Jan.2;nov.15",
-          bkrx: "1,810",
-          many: "$51,447",
-          shisu: "$14,372",
-          ssbl: "9:01",
-          bjxsbl: "<20       71%;  20 - 49    28.4%;  >50    0.5%"
+          bkrx: "Jan.2;nov.15",
+          riqi: "1,810",
+          shisu: "$51,447",
+          ssbl: "$14,372",
+          ssbls: "9:01",
+          bjxsbl: "<20       71%;  20 - 49    28.4%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "11",
@@ -179,12 +190,13 @@ export default {
           city: "Grinnell, Iowa；Rural",
           xingzhi: "Private ",
           riqi: "29%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "1,712",
-          many: "$52,392",
-          shisu: "$12,810",
-          ssbl: "9:01",
-          bjxsbl: "<20       63.4%;  20 - 49    36.3%;  >50    0.2%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "1,712",
+          shisu: "$52,392",
+          ssbl: "$12,810",
+          ssbls: "9:01",
+          bjxsbl: "<20       63.4%;  20 - 49    36.3%;  >50    0.2%",
+          xb: "Both"
         },
         {
           num: "11",
@@ -192,12 +204,13 @@ export default {
           city: "Haverford, Pennsylvania; Suburban",
           xingzhi: "Private ",
           riqi: "20%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "1,296",
-          many: "$54,592",
-          shisu: "$16,402",
-          ssbl: "9:01",
-          bjxsbl: "<20       75.9%;  20 - 49    23.2%;  >50    0.8%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "1,296",
+          shisu: "$54,592",
+          ssbl: "$16,402",
+          ssbls: "9:01",
+          bjxsbl: "<20       75.9%;  20 - 49    23.2%;  >50    0.8%",
+          xb: "Both"
         },
         {
           num: "11",
@@ -205,12 +218,13 @@ export default {
           city: "Northampton, Massachusetts; Suburban",
           xingzhi: "Private ",
           riqi: "32%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,918",
-          many: "$52,404",
-          shisu: "$17,520 ",
-          ssbl: "9:01",
-          bjxsbl: "<20       67.9%;  20 - 49    28.4%;  >50    3.6%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,918",
+          shisu: "$52,404",
+          ssbl: "$17,520 ",
+          ssbls: "9:01",
+          bjxsbl: "<20       67.9%;  20 - 49    28.4%;  >50    3.6%",
+          xb: "Female"
         },
         {
           num: "11",
@@ -218,12 +232,13 @@ export default {
           city: "Poughkeepsie, N.Y.；Suburban",
           xingzhi: "Private ",
           riqi: "24%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "2,353",
-          many: "$56,960",
-          shisu: "$13,550",
-          ssbl: "8:01",
-          bjxsbl: "<20       67.2%;  20 - 49    32.5%;  >50    0.3%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "2,353",
+          shisu: "$56,960",
+          ssbl: "$13,550",
+          ssbls: "8:01",
+          bjxsbl: "<20       67.2%;  20 - 49    32.5%;  >50    0.3%",
+          xb: "Both"
         },
         {
           num: "11",
@@ -231,12 +246,13 @@ export default {
           city: " Lexington, Va.; Suburban",
           xingzhi: "Private ",
           riqi: "22%",
-          jzrq: "Jan.1;Nov.1",
-          bkrx: "2,220",
-          many: "$52,455",
-          shisu: "$13,925 ",
-          ssbl: "8:01",
-          bjxsbl: "<20       71.6%;  20 - 49    28.4%;  >50    1%"
+          bkrx: "Jan.1;Nov.1",
+          riqi: "2,220",
+          shisu: "$52,455",
+          ssbl: "$13,925 ",
+          ssbls: "8:01",
+          bjxsbl: "<20       71.6%;  20 - 49    28.4%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "16",
@@ -244,12 +260,13 @@ export default {
           city: " Hamilton, N.Y.; Rural",
           xingzhi: "Private ",
           riqi: "28%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,881",
-          many: "$55,870",
-          shisu: "$13,995",
-          ssbl: "9:01",
-          bjxsbl: "<20       73.4%;  20 - 49    25.6%;  >50    1%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,881",
+          shisu: "$55,870",
+          ssbl: "$13,995",
+          ssbls: "9:01",
+          bjxsbl: "<20       73.4%;  20 - 49    25.6%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "16",
@@ -257,12 +274,13 @@ export default {
           city: " Clinton, N.Y.; Rural",
           xingzhi: "Private ",
           riqi: "24%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "1,897",
-          many: "$54,620",
-          shisu: "$13,870 ",
-          ssbl: "9:01",
-          bjxsbl: "<20       74.6%;  20 - 49    24.9%;  >50    0.4%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "1,897",
+          shisu: "$54,620",
+          ssbl: "$13,870 ",
+          ssbls: "9:01",
+          bjxsbl: "<20       74.6%;  20 - 49    24.9%;  >50    0.4%",
+          xb: "Both"
         },
         {
           num: "18",
@@ -270,12 +288,13 @@ export default {
           city: " Waterville, Maine; Rural",
           xingzhi: "Private ",
           riqi: "16%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "1,917",
-          many: "$55,210 ",
-          shisu: "$14,190",
-          ssbl: "10:01",
-          bjxsbl: "<20       71.4%;  20 - 49    26.9%;  >50    1.7%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "1,917",
+          shisu: "$55,210 ",
+          ssbl: "$14,190",
+          ssbls: "10:01",
+          bjxsbl: "<20       71.4%;  20 - 49    26.9%;  >50    1.7%",
+          xb: "Both"
         },
         {
           num: "18",
@@ -283,12 +302,13 @@ export default {
           city: "Claremont, California; Suburban",
           xingzhi: "Private ",
           riqi: "15%",
-          jzrq: "Jan.5;Nov.15",
-          bkrx: "844",
-          many: "$56,876",
-          shisu: "$18,127 ",
-          ssbl: "8:01",
-          bjxsbl: "<20       57.6%;  20 - 49    38.4%;  >50    4%"
+          bkrx: "Jan.5;Nov.15",
+          riqi: "844",
+          shisu: "$56,876",
+          ssbl: "$18,127 ",
+          ssbls: "8:01",
+          bjxsbl: "<20       57.6%;  20 - 49    38.4%;  >50    4%",
+          xb: "Both"
         },
         {
           num: "18",
@@ -296,12 +316,13 @@ export default {
           city: "West Point, N.Y.; Suburban",
           xingzhi: "Public",
           riqi: "10%",
-          jzrq: "Feb.28",
-          bkrx: "4,491",
-          many: "0",
+          bkrx: "Feb.28",
+          riqi: "4,491",
           shisu: "0",
-          ssbl: "7:01",
-          bjxsbl: "<20       96.9%;  20 - 49    3.1%;  >50    1%"
+          ssbl: "0",
+          ssbls: "7:01",
+          bjxsbl: "<20       96.9%;  20 - 49    3.1%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "18",
@@ -309,12 +330,13 @@ export default {
           city: "Middletown, Connecticut ; City",
           xingzhi: "Private ",
           riqi: "16%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "3,213",
-          many: "$54,614",
-          shisu: "$16,090",
-          ssbl: "8:01",
-          bjxsbl: "<20       74.6%;  20 - 49    24.9%;  >50    0.4%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "3,213",
+          shisu: "$54,614",
+          ssbl: "$16,090",
+          ssbls: "8:01",
+          bjxsbl: "<20       74.6%;  20 - 49    24.9%;  >50    0.4%",
+          xb: "Both"
         },
         {
           num: "22",
@@ -322,12 +344,13 @@ export default {
           city: "Lewiston, Maine; City",
           xingzhi: "Private ",
           riqi: "22%",
-          jzrq: "Jan.1;Nov.15",
-          bkrx: "1,787",
-          many: "$53,794",
-          shisu: "$15,224",
-          ssbl: "10:01",
-          bjxsbl: "<20       69.3%;  20 - 49    29.8%;  >50    0.9%"
+          bkrx: "Jan.1;Nov.15",
+          riqi: "1,787",
+          shisu: "$53,794",
+          ssbl: "$15,224",
+          ssbls: "10:01",
+          bjxsbl: "<20       69.3%;  20 - 49    29.8%;  >50    0.9%",
+          xb: "Both"
         },
         {
           num: "22",
@@ -335,12 +358,13 @@ export default {
           city: "Aliso Viejo, California; Suburban",
           xingzhi: "Private ",
           riqi: "37%",
-          jzrq: "Jan.15;Nov.1",
-          bkrx: "427",
-          many: "$33,146 ",
-          shisu: "$12,530 ",
-          ssbl: "8:01",
-          bjxsbl: "<20       94.8%;  20 - 49    5.2%;  >50    1%"
+          bkrx: "Jan.15;Nov.1",
+          riqi: "427",
+          shisu: "$33,146 ",
+          ssbl: "$12,530 ",
+          ssbls: "8:01",
+          bjxsbl: "<20       94.8%;  20 - 49    5.2%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "22",
@@ -348,12 +372,13 @@ export default {
           city: "Annapolis, Maryland; City",
           xingzhi: "Public",
           riqi: "8%",
-          jzrq: "Jan.31",
-          bkrx: "4,495",
-          many: "0",
+          bkrx: "Jan.31",
+          riqi: "4,495",
           shisu: "0",
-          ssbl: "8:01",
-          bjxsbl: "<20       74.4%;  20 - 49    25.6%;  >50    1%"
+          ssbl: "0",
+          ssbls: "8:01",
+          bjxsbl: "<20       74.4%;  20 - 49    25.6%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "25",
@@ -361,12 +386,13 @@ export default {
           city: "New York, NY; Urban",
           xingzhi: "Private ",
           riqi: "15%",
-          jzrq: "Jan.1;Nov.1",
-          bkrx: "2,604",
-          many: "$55,032",
-          shisu: "$17,225",
-          ssbl: "10:01",
-          bjxsbl: "<20       73.1%;  20 - 49    19.8%;  >50    7.1%"
+          bkrx: "Jan.1;Nov.1",
+          riqi: "2,604",
+          shisu: "$55,032",
+          ssbl: "$17,225",
+          ssbls: "10:01",
+          bjxsbl: "<20       73.1%;  20 - 49    19.8%;  >50    7.1%",
+          xb: "Female"
         },
         {
           num: "25",
@@ -374,12 +400,13 @@ export default {
           city: " Richmond, Virginia; Suburban",
           xingzhi: "Private ",
           riqi: "33%",
-          jzrq: "Jan.15;Nov.1",
-          bkrx: "4,023",
-          many: "$52,610 ",
-          shisu: "$12,250",
-          ssbl: "8:01",
-          bjxsbl: "<20       71.1%;  20 - 49    28.7%;  >50    0.2%"
+          bkrx: "Jan.15;Nov.1",
+          riqi: "4,023",
+          shisu: "$52,610 ",
+          ssbl: "$12,250",
+          ssbls: "8:01",
+          bjxsbl: "<20       71.1%;  20 - 49    28.7%;  >50    0.2%",
+          xb: "Both"
         },
         {
           num: "27",
@@ -387,12 +414,13 @@ export default {
           city: " Bryn Mawr,Pennsylvania; Suburban",
           xingzhi: "Private ",
           riqi: "38%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "1,640",
-          many: "$52,360",
-          shisu: "$16,500",
-          ssbl: "8:01",
-          bjxsbl: "<20       70.7%;  20 - 49    26.7%;  >50    2.7%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "1,640",
+          shisu: "$52,360",
+          ssbl: "$16,500",
+          ssbls: "8:01",
+          bjxsbl: "<20       70.7%;  20 - 49    26.7%;  >50    2.7%",
+          xb: "Female"
         },
         {
           num: "27",
@@ -400,12 +428,13 @@ export default {
           city: " Colorado Springs ,Colorado; City",
           xingzhi: "Private ",
           riqi: "15%",
-          jzrq: "Jan.15; Nov.10",
-          bkrx: "2,118",
-          many: "$55,470",
-          shisu: "$12,512 ",
-          ssbl: "10:01",
-          bjxsbl: "<20       71.3%;  20 - 49    28.7%;  >50    1%"
+          bkrx: "Jan.15; Nov.10",
+          riqi: "2,118",
+          shisu: "$55,470",
+          ssbl: "$12,512 ",
+          ssbls: "10:01",
+          bjxsbl: "<20       71.3%;  20 - 49    28.7%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "27",
@@ -413,12 +442,13 @@ export default {
           city: "Saint Paul, Minnesota； Urban",
           xingzhi: "Private ",
           riqi: "41%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,136",
-          many: "$54,348",
-          shisu: "$12,156",
-          ssbl: "10:01",
-          bjxsbl: "<20       70.3%;  20 - 49    29.3%;  >50    0.5%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,136",
+          shisu: "$54,348",
+          ssbl: "$12,156",
+          ssbls: "10:01",
+          bjxsbl: "<20       70.3%;  20 - 49    29.3%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "30",
@@ -426,12 +456,13 @@ export default {
           city: "Gambier, Ohio; Rural",
           xingzhi: "Private ",
           riqi: "34%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "1,677",
-          many: "$55,930",
-          shisu: "$12,510",
-          ssbl: "9:01",
-          bjxsbl: "<20       74.4%;  20 - 49    25.1%;  >50    0.5%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "1,677",
+          shisu: "$55,930",
+          ssbl: "$12,510",
+          ssbls: "9:01",
+          bjxsbl: "<20       74.4%;  20 - 49    25.1%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "30",
@@ -439,12 +470,13 @@ export default {
           city: "South Hadley, Massachusetts",
           xingzhi: "Private ",
           riqi: "51%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,334",
-          many: "$49,998",
-          shisu: "$14,660",
-          ssbl: "9:01",
-          bjxsbl: "<20       72.8%;  20 - 49    25.8%;  >50    1.4%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,334",
+          shisu: "$49,998",
+          ssbl: "$14,660",
+          ssbls: "9:01",
+          bjxsbl: "<20       72.8%;  20 - 49    25.8%;  >50    1.4%",
+          xb: "Female"
         },
         {
           num: "30",
@@ -452,12 +484,13 @@ export default {
           city: "Oberlin, Ohio; Suburban",
           xingzhi: "Private ",
           riqi: "34%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,853",
-          many: "$55,052 ",
-          shisu: "$16,338 ",
-          ssbl: "9:01",
-          bjxsbl: "<20       78%;  20 - 49    20.3%;  >50    1.7%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,853",
+          shisu: "$55,052 ",
+          ssbl: "$16,338 ",
+          ssbls: "9:01",
+          bjxsbl: "<20       78%;  20 - 49    20.3%;  >50    1.7%",
+          xb: "Both"
         },
         {
           num: "30",
@@ -465,12 +498,13 @@ export default {
           city: "Claremont, California; Suburban",
           xingzhi: "Private ",
           riqi: "33%",
-          jzrq: "Jan.1; Nov.15",
-          bkrx: "1,077",
-          many: "$55,024",
-          shisu: "$16,932",
-          ssbl: "10:01",
-          bjxsbl: "<20       80%;  20 - 49    20%;  >50    1%"
+          bkrx: "Jan.1; Nov.15",
+          riqi: "1,077",
+          shisu: "$55,024",
+          ssbl: "$16,932",
+          ssbls: "10:01",
+          bjxsbl: "<20       80%;  20 - 49    20%;  >50    1%",
+          xb: "Female"
         },
         {
           num: "30",
@@ -478,12 +512,13 @@ export default {
           city: "Colorado; Suburban",
           xingzhi: "Public",
           riqi: "12%",
-          jzrq: "Dec.31",
-          bkrx: "4,276",
-          many: "0",
+          bkrx: "Dec.31",
+          riqi: "4,276",
           shisu: "0",
-          ssbl: "9:01",
-          bjxsbl: "<20       63.8%;  20 - 49    36.1%;  >50    0.1%"
+          ssbl: "0",
+          ssbls: "9:01",
+          bjxsbl: "<20       63.8%;  20 - 49    36.1%;  >50    0.1%",
+          xb: "Both"
         },
         {
           num: "35",
@@ -491,12 +526,13 @@ export default {
           city: "Worcester, Massachusetts; Suburban",
           xingzhi: "Private ",
           riqi: "40%",
-          jzrq: "Jan.15; Dec.15",
-          bkrx: "3,051",
-          many: "$52,770",
-          shisu: "$14,520 ",
-          ssbl: "10:01",
-          bjxsbl: "<20       58.4%;  20 - 49    39.9%;  >50    1.7%"
+          bkrx: "Jan.15; Dec.15",
+          riqi: "3,051",
+          shisu: "$52,770",
+          ssbl: "$14,520 ",
+          ssbls: "10:01",
+          bjxsbl: "<20       58.4%;  20 - 49    39.9%;  >50    1.7%",
+          xb: "Both"
         },
         {
           num: "36",
@@ -504,12 +540,13 @@ export default {
           city: "Lewisburg, Pennsylvania; Rural",
           xingzhi: "Private ",
           riqi: "31%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "3,678",
-          many: "$56,092",
-          shisu: "$13,662",
-          ssbl: "9:01",
-          bjxsbl: "<20       52%;  20 - 49    46.5%;  >50    1.5%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "3,678",
+          shisu: "$56,092",
+          ssbl: "$13,662",
+          ssbls: "9:01",
+          bjxsbl: "<20       52%;  20 - 49    46.5%;  >50    1.5%",
+          xb: "Both"
         },
         {
           num: "36",
@@ -517,12 +554,13 @@ export default {
           city: "Lancaster, Pennsylvania; City",
           xingzhi: "Private ",
           riqi: "34%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,283",
-          many: "$56,550",
-          shisu: "$14,050",
-          ssbl: "9:01",
-          bjxsbl: "<20       67.7%;  20 - 49    31.8%;  >50    0.5%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,283",
+          shisu: "$56,550",
+          ssbl: "$14,050",
+          ssbls: "9:01",
+          bjxsbl: "<20       67.7%;  20 - 49    31.8%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "36",
@@ -530,12 +568,13 @@ export default {
           city: " Easton,Pennsylvania; Suburban",
           xingzhi: "Private ",
           riqi: "31%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,594",
-          many: "$52,880",
-          shisu: "$15,640",
-          ssbl: "10:01",
-          bjxsbl: "<20       61.2%;  20 - 49    38.2%;  >50    0.5%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,594",
+          shisu: "$52,880",
+          ssbl: "$15,640",
+          ssbls: "10:01",
+          bjxsbl: "<20       61.2%;  20 - 49    38.2%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "39",
@@ -543,12 +582,13 @@ export default {
           city: " Los Angeles; California; Urban",
           xingzhi: "Private ",
           riqi: "42%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,055",
-          many: "$54,686",
-          shisu: "$15,496",
-          ssbl: "9:01",
-          bjxsbl: "<20       67.1%;  20 - 49    32.9%;  >50    1%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,055",
+          shisu: "$54,686",
+          ssbl: "$15,496",
+          ssbls: "9:01",
+          bjxsbl: "<20       67.1%;  20 - 49    32.9%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "39",
@@ -556,12 +596,13 @@ export default {
           city: "Schenectady, N.Y.; City",
           xingzhi: "Private ",
           riqi: "37%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,267",
-          many: "$55,290",
-          shisu: "$13,563",
-          ssbl: "10:01",
-          bjxsbl: "<20       66.8%;  20 - 49    32.9%;  >50    0.3%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,267",
+          shisu: "$55,290",
+          ssbl: "$13,563",
+          ssbls: "10:01",
+          bjxsbl: "<20       66.8%;  20 - 49    32.9%;  >50    0.3%",
+          xb: "Both"
         },
         {
           num: "41",
@@ -569,12 +610,13 @@ export default {
           city: "Claremont, California; Suburban",
           xingzhi: "Private ",
           riqi: "16%",
-          jzrq: "Jan.1; Nov.15",
-          bkrx: "1,112",
-          many: "$52,236",
-          shisu: "$16,264",
-          ssbl: "11:01",
-          bjxsbl: "<20       71.3%;  20 - 49    28.7%;  >50    1%"
+          bkrx: "Jan.1; Nov.15",
+          riqi: "1,112",
+          shisu: "$52,236",
+          ssbl: "$16,264",
+          ssbls: "11:01",
+          bjxsbl: "<20       71.3%;  20 - 49    28.7%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "41",
@@ -582,12 +624,13 @@ export default {
           city: "Saratoga Springs, N.Y.; Suburban",
           xingzhi: "Private ",
           riqi: "25%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,684",
-          many: "$54,270 ",
-          shisu: "$14,494",
-          ssbl: "8:01",
-          bjxsbl: "<20       73.1%;  20 - 49    26.5%;  >50    0.4%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,684",
+          shisu: "$54,270 ",
+          ssbl: "$14,494",
+          ssbls: "8:01",
+          bjxsbl: "<20       73.1%;  20 - 49    26.5%;  >50    0.4%",
+          xb: "Both"
         },
         {
           num: "43",
@@ -595,12 +638,13 @@ export default {
           city: "Granville, Ohio; Suburban",
           xingzhi: "Private ",
           riqi: "37%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "2,341",
-          many: "$51,960",
-          shisu: "$12,710",
-          ssbl: "9:01",
-          bjxsbl: "<20       66.1%;  20 - 49    33.9%;  >50    1%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "2,341",
+          shisu: "$51,960",
+          ssbl: "$12,710",
+          ssbls: "9:01",
+          bjxsbl: "<20       66.1%;  20 - 49    33.9%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "43",
@@ -608,12 +652,13 @@ export default {
           city: "Santa Paula, California; Rural",
           xingzhi: "Private ",
           riqi: "72%",
-          jzrq: "Rolling ",
-          bkrx: "370",
-          many: "$25,000",
-          shisu: "$8,400",
-          ssbl: "11:01",
-          bjxsbl: "<20       100%;  20 - 49    0%;  >50    0%"
+          bkrx: "Rolling ",
+          riqi: "370",
+          shisu: "$25,000",
+          ssbl: "$8,400",
+          ssbls: "11:01",
+          bjxsbl: "<20       100%;  20 - 49    0%;  >50    0%",
+          xb: "Both"
         },
         {
           num: "43",
@@ -621,12 +666,13 @@ export default {
           city: "Walla Walla, Washington; Rural",
           xingzhi: "Private ",
           riqi: "52%",
-          jzrq: "Jan.15; Nov.15",
-          bkrx: "1,510",
-          many: "$51,764",
-          shisu: "$13,174",
-          ssbl: "9:01",
-          bjxsbl: "<20       69%;  20 - 49    31%;  >50    1%"
+          bkrx: "Jan.15; Nov.15",
+          riqi: "1,510",
+          shisu: "$51,764",
+          ssbl: "$13,174",
+          ssbls: "9:01",
+          bjxsbl: "<20       69%;  20 - 49    31%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "46",
@@ -634,12 +680,13 @@ export default {
           city: "Danville, Kentucky; City",
           xingzhi: "Private ",
           riqi: "76%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "1,450",
-          many: "$41,700",
-          shisu: "$10,480",
-          ssbl: "10:01",
-          bjxsbl: "<20       60.6%;  20 - 49    39.4%;  >50    1%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "1,450",
+          shisu: "$41,700",
+          ssbl: "$10,480",
+          ssbls: "10:01",
+          bjxsbl: "<20       60.6%;  20 - 49    39.4%;  >50    1%",
+          xb: "Both"
         },
         {
           num: "46",
@@ -647,12 +694,13 @@ export default {
           city: "New London, Connecticut; City",
           xingzhi: "Private ",
           riqi: "38%",
-          jzrq: "Jan.1; Nov.15",
-          bkrx: "1,817",
-          many: "$54,820",
-          shisu: "$15,150",
-          ssbl: "9:01",
-          bjxsbl: "<20       75%;  20 - 49    24.5%;  >50    0.5%"
+          bkrx: "Jan.1; Nov.15",
+          riqi: "1,817",
+          shisu: "$54,820",
+          ssbl: "$15,150",
+          ssbls: "9:01",
+          bjxsbl: "<20       75%;  20 - 49    24.5%;  >50    0.5%",
+          xb: "Both"
         },
         {
           num: "46",
@@ -660,12 +708,13 @@ export default {
           city: " Hartford, Connecticut; Urban",
           xingzhi: "Private ",
           riqi: "34%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,282",
-          many: "$56,910",
-          shisu: "$14,750",
-          ssbl: "9:01",
-          bjxsbl: "<20       73.9%;  20 - 49    25.7%;  >50    0.4%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,282",
+          shisu: "$56,910",
+          ssbl: "$14,750",
+          ssbls: "9:01",
+          bjxsbl: "<20       73.9%;  20 - 49    25.7%;  >50    0.4%",
+          xb: "Both"
         },
         {
           num: "49",
@@ -673,12 +722,13 @@ export default {
           city: "Gettysburg, Pennsylvania; Suburban",
           xingzhi: "Private ",
           riqi: "46%",
-          jzrq: "Jan.15;Nov.15",
-          bkrx: "2,409",
-          many: "$54,480",
-          shisu: "$13,010 ",
-          ssbl: "9:01",
-          bjxsbl: "<20       69.2%;  20 - 49    31.6%;  >50    0.2%"
+          bkrx: "Jan.15;Nov.15",
+          riqi: "2,409",
+          shisu: "$54,480",
+          ssbl: "$13,010 ",
+          ssbls: "9:01",
+          bjxsbl: "<20       69.2%;  20 - 49    31.6%;  >50    0.2%",
+          xb: "Both"
         },
         {
           num: "49",
@@ -686,12 +736,13 @@ export default {
           city: " Sewanee, Tennessee; Rural",
           xingzhi: "Private ",
           riqi: "47%",
-          jzrq: "Feb.1; Nov.15",
-          bkrx: "1,778",
-          many: "$45,120 ",
-          shisu: "$12,880",
-          ssbl: "10:01",
-          bjxsbl: "<20       63.3%;  20 - 49    35.6%;  >50    0.8%"
+          bkrx: "Feb.1; Nov.15",
+          riqi: "1,778",
+          shisu: "$45,120 ",
+          ssbl: "$12,880",
+          ssbls: "10:01",
+          bjxsbl: "<20       63.3%;  20 - 49    35.6%;  >50    0.8%",
+          xb: "Both"
         }
       ]
     };
@@ -734,7 +785,7 @@ export default {
           width: 60px;
         }
         &:nth-child(2) {
-          width: 115px;
+          width: 100px;
           padding: 20px 0;
         }
         &:nth-child(3) {
@@ -745,10 +796,10 @@ export default {
           width: 70px;
         }
         &:nth-child(5) {
-          width: 80px;
+          width: 100px;
         }
         &:nth-child(6) {
-          width: 124px;
+          width: 114px;
         }
         &:nth-child(7) {
           width: 90px;
@@ -763,7 +814,7 @@ export default {
           width: 88px;
         }
         &:nth-child(11) {
-          width: 284px;
+          width: 279px;
           text-align: left;
         }
       }
