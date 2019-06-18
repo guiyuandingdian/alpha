@@ -4,13 +4,13 @@
 import { get, post } from './request'
 
 // 账号密码登录 elogin
-export const Elogin = p => post('api/elogin', p);
+export const Elogin = p => post('/elogin', p);
 
 // 手机号登录 login
-export const Login = p => post('api/login', p);
+export const Login = p => post('/login', p);
 
 // 注册 register
-export const Register = p => post('api/register', p);
+export const Register = p => post('/register', p);
 
 // 发送验证码 /phoneCode
 // step1（预评估表）
