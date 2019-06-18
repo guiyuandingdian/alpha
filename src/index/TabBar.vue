@@ -18,7 +18,6 @@
               class="el-menu-demo"
               mode="horizontal"
               :router="true"
-              @select="handleSelect"
               text-color="#fff"
               active-text-color="#333"
               background-color="#000"
