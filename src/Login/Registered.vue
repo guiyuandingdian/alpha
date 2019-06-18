@@ -38,8 +38,12 @@
             </el-form-item>
 
             <el-form-item prop="smscode" class="code">
-              <el-input v-model="ruleForm.smscode" placeholder="验证码"></el-input>
-              <el-button type="primary" :disabled="isDisabled" @click="sendCode()">{{buttonText}}</el-button>
+              <el-col :span="18">
+                <el-input v-model="ruleForm.smscode" placeholder="验证码"></el-input>
+              </el-col>
+              <el-col :span="6">
+                <el-button type="primary" :disabled="isDisabled" @click="sendCode()">{{buttonText}}</el-button>
+              </el-col>
             </el-form-item>
             <div class="box">
               <el-button
@@ -142,7 +146,7 @@ export default {
         smscode: [{ validator: checkSmscode, trigger: "change" }]
       },
       buttonText: "发送验证码",
-      isDisabled: false ,// 是否禁止点击发送验证码按钮，
+      isDisabled: false, // 是否禁止点击发送验证码按钮，
       flag: true
     };
   },
@@ -171,9 +175,7 @@ export default {
       }
     },
     // <!--提交注册-->
-    submitForm(formName) {
-      
-    }
+    submitForm(formName) {}
   },
   components: {
     TabBar

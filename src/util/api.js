@@ -13,34 +13,15 @@ export const Login = p => post('api/login', p);
 export const Register = p => post('api/register', p);
 
 // 发送验证码 /phoneCode
-export const PhoneCode = p => post('api/phoneCode', p);
-
 // step1（预评估表）
-export const PhoneCode = p => post('api/phoneCode', p);
-
 // step2（成绩管理）/stepTwo
-export const StepTwo = p => post('api/stepTwo', p);
-
 // step3（选择学校）
-export const Step = p => post('api/step', p);
-
 // step4（文书修改）
-export const StepFour = p => post('api/stepFour', p);
-
 // step5（提交申请）
-export const StepFive = p => post('api/stepFive', p);
-
 // step6（申请结束）
-export const StepSix = p => post('api/stepSix', p);
-
 // 预评估表显示
-export const Predict = p => post('api/Predict', p);
-
 //学生日历看板 /calendarStu
-export const CalendarStu = p => post('api/calendarStu', p);
-
 //学业成绩 /gpaStu
-export const GpaStu = p => post('api/gpaStu', p);
 //科目添加 /stuAdd
 //科目修改 /stuUpdate
 //科目删除 /stuDele
