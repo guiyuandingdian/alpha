@@ -98,7 +98,7 @@ export default {
         {
           imgs: "../../static/img/cg02.png",
           img: "../../static/img/cg02.png",
-          name: "z同学xiaolan",
+          name: "z同学",
           school: "/",
           gpa: "3.9",
           toefl: "/",
@@ -109,7 +109,7 @@ export default {
         {
           imgs: "../../static/img/cg03.png",
           img: "../../static/img/cg03.png",
-          name: "X同学zhiyi",
+          name: "X同学",
           school: "/",
           gpa: "3.9",
           toefl: "/",
@@ -120,7 +120,7 @@ export default {
         {
           imgs: "../../static/img/cg04.png",
           img: "../../static/img/cg04.png",
-          name: "X同学zhiyi",
+          name: "X同学",
           school: "/",
           gpa: "3.85",
           toefl: "/",
@@ -175,7 +175,7 @@ export default {
         {
           imgs: "../../static/img/cg09.png",
           img: "../../static/img/cg09.png",
-          name: "Yifei",
+          name: "Yi同学",
           school: "罗切斯特大学",
           gpa: "3.8",
           toefl: "105",
@@ -186,7 +186,7 @@ export default {
         {
           imgs: "",
           img: "",
-          name: "Yiheng Chen",
+          name: "Chen同学",
           school: "曼彻斯特大学",
           gpa: "3.8",
           toefl: "/",
@@ -197,7 +197,7 @@ export default {
         {
           imgs: "",
           img: "",
-          name: "Jiawei",
+          name: "Jia同学",
           school: "巴布森学院",
           gpa: "3.8",
           toefl: "107",
@@ -208,7 +208,7 @@ export default {
         {
           imgs: "",
           img: "",
-          name: "罗迈",
+          name: "罗同学",
           school: "纽约大学阿布扎比分校",
           gpa: "3.85",
           toefl: "112",
@@ -219,7 +219,7 @@ export default {
         {
           imgs: "",
           img: "",
-          name: "芮芃",
+          name: "芮同学",
           school: "康奈尔大学",
           gpa: "3.9",
           toefl: "118",

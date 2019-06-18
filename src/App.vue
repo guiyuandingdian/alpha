@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "../static/css/main.css";
 #app li{
   list-style: none;

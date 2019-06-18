@@ -10,10 +10,10 @@
             <img src="../../static/img/logo3.png" alt>
           </div>
           <el-form ref="ruleForm" :model="ruleForm" status-icon :rules="rules">
-            <el-form-item>
+            <el-form-item prop="email">
               <el-input class="email" v-model="ruleForm.email" placeholder="请输入邮箱"></el-input>
             </el-form-item>
-            <el-form-item>
+            <el-form-item minlength="6" maxlength="16">
               <el-input
                 class="input"
                 v-model="ruleForm.pass"
@@ -25,18 +25,29 @@
             </el-form-item>
             <el-form-item prop="checkPass">
               <el-input
-                prop="checkPass"
                 v-model="ruleForm.checkPass"
                 placeholder="确认密码"
                 type="password"
                 autocomplete="off"
               ></el-input>
             </el-form-item>
-            <el-form-item>
-              <el-input class="phone" v-model="ruleForm.phone" placeholder="11位手机号"></el-input>
+            <el-form-item prop="phone">
+              <el-input class="phone" v-model="ruleForm.phone" placeholder="11位手机号">
+                <template slot="prepend">+86</template>
+              </el-input>
+            </el-form-item>
+
+            <el-form-item prop="smscode" class="code">
+              <el-input v-model="ruleForm.smscode" placeholder="验证码"></el-input>
+              <el-button type="primary" :disabled="isDisabled" @click="sendCode()">{{buttonText}}</el-button>
             </el-form-item>
             <div class="box">
-              <el-button type="primary" :loading="loading" @click="submitForm('ruleForm')" class="denglu">注册</el-button>
+              <el-button
+                type="primary"
+                :loading="loading"
+                @click="submitForm('ruleForm')"
+                class="denglu"
+              >注册</el-button>
               <router-link to="/Login" class="Registered">使用已有账号登录</router-link>
             </div>
           </el-form>
@@ -53,12 +64,20 @@ export default {
   name: "Registered",
   props: {},
   data() {
-    var checkEmail = (rule, value, callback) => {
+    let checkEmail = (rule, value, callback) => {
+      const mailReg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
       if (!value) {
-        return callback(new Error("邮箱不能为空"));
+        return callback(new Error("‘邮箱不能为空‘"));
       }
+      setTimeout(() => {
+        if (mailReg.test(value)) {
+          callback();
+        } else {
+          callback(new Error("‘请输入正确的邮箱格式‘"));
+        }
+      }, 100);
     };
-    var validatePass = (rule, value, callback) => {
+    let validatePass = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入密码"));
       } else {
@@ -68,7 +87,7 @@ export default {
         callback();
       }
     };
-    var validatePass2 = (rule, value, callback) => {
+    let validatePass2 = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请再次输入密码"));
       } else if (value !== this.ruleForm.pass) {
@@ -77,12 +96,12 @@ export default {
         callback();
       }
     };
-    var checkphone = (rule, value, callback) => {
+    let checkphone = (rule, value, callback) => {
       if (!value) {
         return callback(new Error("手机号不能为空"));
       }
       setTimeout(() => {
-        if (!Number.isInteger(value)) {
+        if (!Number.isInteger(+value)) {
           callback(new Error("请输入数字值"));
         } else {
           if (value.legth == 13) {
@@ -93,21 +112,38 @@ export default {
         }
       }, 1000);
     };
+    let checkSmscode = (rule, value, callback) => {
+      if (!value) {
+        return callback(new Error("验证码不能为空‘"));
+      }
+      setTimeout(() => {
+        if (!Number.isInteger(+value)) {
+          callback(new Error("‘请输入数字值‘"));
+        } else {
+          callback();
+        }
+      }, 100);
+    };
     return {
       loading: false,
       ruleForm: {
         emall: "",
         pass: "",
         checkPass: "",
-        iphone: ""
+        phone: "",
+        smscode: ""
       },
       checked: false,
       rules: {
         email: [{ validator: checkEmail, trigger: "blur" }],
         pass: [{ validator: validatePass, trigger: "blur" }],
         checkPass: [{ validator: validatePass2, trigger: "blur" }],
-        phone: [{ validator: checkphone, trigger: "blur" }]
-      }
+        phone: [{ validator: checkphone, trigger: "blur" }],
+        smscode: [{ validator: checkSmscode, trigger: "change" }]
+      },
+      buttonText: "发送验证码",
+      isDisabled: false ,// 是否禁止点击发送验证码按钮，
+      flag: true
     };
   },
   computed: {},
@@ -115,15 +151,28 @@ export default {
   mounted() {},
   watch: {},
   methods: {
+    // <!--发送验证码-->
+    sendCode() {
+      let time = 60;
+      this.buttonText = "已发送";
+      this.isDisabled = true;
+      if (this.flag) {
+        this.flag = false;
+        let timer = setInterval(() => {
+          time--;
+          this.buttonText = time + " 秒";
+          if (time === 0) {
+            clearInterval(timer);
+            this.buttonText = "重新获取";
+            this.isDisabled = false;
+            this.flag = true;
+          }
+        }, 1000);
+      }
+    },
+    // <!--提交注册-->
     submitForm(formName) {
-      this.$refs[formName].validate(valid => {
-        if (valid) {
-          alert("submit!");
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
-      });
+      
     }
   },
   components: {
@@ -171,11 +220,17 @@ export default {
     margin-bottom: 50px;
   }
   .denglu {
-    width:285px;
+    width: 285px;
     height: 68px;
     background: rgba(125, 17, 17, 1);
     opacity: 1;
     border-radius: 10px;
+  }
+  .el-select .el-input {
+    width: 160px !important;
+  }
+  .input-with-select .el-input-group__prepend {
+    background-color: #fff;
   }
 }
 </style>

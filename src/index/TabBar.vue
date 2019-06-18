@@ -36,8 +36,8 @@
               </el-submenu>
               <el-submenu index="/APIB">
                 <template slot="title">课程体系</template>
-                <el-menu-item index="/APIB">AP&IB</el-menu-item>
-                <el-menu-item index="/A_Level">A-Level</el-menu-item>
+                <el-menu-item index="/A_Level">AP&IB</el-menu-item>
+                <el-menu-item index="/APIB">A-Level</el-menu-item>
               </el-submenu>
               <el-menu-item index="/Yxph">院校排名</el-menu-item>
               <el-menu-item index="/Cgal">成功案例</el-menu-item>
@@ -45,7 +45,7 @@
           </div>
         </el-col>
         <el-col :span="4" class="denglo">
-          <!-- <router-link to="/Home" class="lgo">登录注册</router-link> -->
+          <router-link to="/Home" class="lgo">登录注册</router-link>
         </el-col>
       </el-row>
     </div>
@@ -78,7 +78,7 @@ export default {
 .warper {
   width: 100%;
   margin: 0 auto;
-  background: #1A1A1A;
+  background: #1a1a1a;
   height: 100px;
 }
 .tabbar {
@@ -86,7 +86,7 @@ export default {
   margin: 0 auto;
   .el-menu {
     background: none !important;
-    .el-menu-item{
+    .el-menu-item {
       color: #fff !important;
       border-radius: 13px;
       background: none !important;
@@ -96,7 +96,7 @@ export default {
     height: 25px !important;
     line-height: 25px !important;
     border: none !important;
-    margin: 0 16px;
+    margin-right: 20px !important;
     border-radius: 20px;
     color: #fff !important;
     min-width: 116px !important;
@@ -106,7 +106,7 @@ export default {
   .el-submenu {
     height: 25px !important;
     border: none !important;
-    margin: 0 20px;
+    margin-right: 20px !important;
     border-radius: 20px;
     color: #fff !important;
     .el-menu-item {
@@ -192,10 +192,12 @@ export default {
 .el-menu--horizontal > .el-menu-item {
   background-color: none;
   color: #fff;
+  margin-right: 20px !important;
 }
 .el-menu--horizontal > .el-menu-item.is-active {
   background-color: #fe3339 !important;
   color: #fff !important;
+  margin-right: 20px !important;
 }
 .submenu__title:hover {
   background: #fe3339 !important;
@@ -206,11 +208,12 @@ export default {
 .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover {
   background: #fe3339 !important;
   border-radius: 20px;
+  margin-right: 20px !important;
 }
 .el-menu--collapse .el-menu .el-submenu,
 .el-menu--popup {
   min-width: 118px !important;
-  background: none !important; 
+  background: none !important;
 }
 .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
   background-color: #fe3339 !important;
@@ -219,10 +222,10 @@ export default {
 .el-icon-arrow-down:before {
   color: #fff;
 }
-.el-menu--horizontal{
+.el-menu--horizontal {
   padding: 0 !important;
 }
-.el-menu--horizontal .el-menu .el-menu-item{
+.el-menu--horizontal .el-menu .el-menu-item {
   padding: 0 16px !important;
   border-radius: 10px !important;
   height: 25px !important;
@@ -230,23 +233,21 @@ export default {
   margin-bottom: 10px;
   text-align: center !important;
 }
-.el-menu--horizontal .el-menu .el-menu-item:hover{
-
+.el-menu--horizontal .el-menu .el-menu-item:hover {
   background: #fe3339 !important;
 }
-.el-menu--horizontal .el-menu .el-menu-item.is-active{
-
+.el-menu--horizontal .el-menu .el-menu-item.is-active {
   background: #fe3339 !important;
-  color: #FFF !important;
+  color: #fff !important;
 }
-.el-menu--horizontal>.el-submenu .el-submenu__title{
+.el-menu--horizontal > .el-submenu .el-submenu__title {
   background: none !important;
 }
-.el-menu--horizontal>.el-submenu .el-submenu__title:hover{
+.el-menu--horizontal > .el-submenu .el-submenu__title:hover {
   background: #fe3339 !important;
-  color: #FFF !important;
+  color: #fff !important;
 }
-.tabbar .el-menu.el-menu--horizontal{
+.tabbar .el-menu.el-menu--horizontal {
   border: none !important;
 }
 </style>

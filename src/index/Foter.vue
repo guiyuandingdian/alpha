@@ -14,12 +14,12 @@
             </el-col>
             <el-col :span="2">|</el-col>
             <el-col :span="11" class="left">
-              <router-link to="/AlphaFwys">关于我们</router-link>
+              <router-link to="/AlphaJs">关于ALPHA</router-link>
             </el-col>
           </el-row>
           <p>电话：021-55088139 地址：上海市杨浦区国顺东路19号首东国顺大厦10楼</p>
           <p>
-            Copyright &#169 2010-2019 爱尔发留学 备案号：
+            Copyright &#169; 2010-2019 爱尔发留学 备案号：
             <a href="http://beian.miit.gov.cn/" target="_black">沪ICP备19009338号-2</a>
           </p>
         </div>
