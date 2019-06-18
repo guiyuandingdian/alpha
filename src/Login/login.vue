@@ -73,6 +73,7 @@
 
 <script>
 import TabBar from "../index/TabBar";
+
 export default {
   name: "Login",
   props: {},
