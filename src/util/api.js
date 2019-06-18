@@ -13,6 +13,7 @@ export const Login = p => post('/login', p);
 export const Register = p => post('/register', p);
 
 // 发送验证码 /phoneCode
+export const PhoneCode = p => post('/phoneCode', p);
 // step1（预评估表）
 // step2（成绩管理）/stepTwo
 // step3（选择学校）

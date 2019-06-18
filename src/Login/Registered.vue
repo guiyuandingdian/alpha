@@ -160,6 +160,8 @@ export default {
       let time = 60;
       this.buttonText = "已发送";
       this.isDisabled = true;
+      
+        
       if (this.flag) {
         this.flag = false;
         let timer = setInterval(() => {
