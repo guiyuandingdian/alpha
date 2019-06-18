@@ -11,6 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      '/api': {
+        target: 'http://rap.zhuoshigroup.com:8088',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
     },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
