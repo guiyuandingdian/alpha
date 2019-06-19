@@ -10,22 +10,22 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "handlebars": ">=4.0.14",
     "js-md5": "^0.7.3",
+    "js-yaml": ">=3.13.1",
+    "morgan": ">=1.9.1",
+    "qs": "^6.7.0",
     "stompjs": "^2.3.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.1",
-    "js-yaml": ">=3.13.1",
     "webpack-bundle-analyzer": ">=3.3.2",
-    "axios": ">=0.18.1",
-    "morgan": ">=1.9.1",
-    "webpack-dev-server": ">=3.1.11",
-    "handlebars": ">=4.0.14"
+    "webpack-dev-server": ">=3.1.11"
   },
   "devDependencies": {
     "ajv": "^6.5.5",
     "autoprefixer": "^7.1.2",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",

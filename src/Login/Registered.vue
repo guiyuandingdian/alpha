@@ -13,12 +13,11 @@
             <el-form-item prop="email">
               <el-input class="email" v-model="ruleForm.email" placeholder="请输入邮箱"></el-input>
             </el-form-item>
-            <el-form-item minlength="6" maxlength="16">
+            <el-form-item minlength="6" maxlength="16" prop="pass">
               <el-input
                 class="input"
                 v-model="ruleForm.pass"
                 autocomplete="off"
-                prop="pass"
                 type="password"
                 placeholder="6 - 16位密码，区分大小写"
               ></el-input>
@@ -64,6 +63,7 @@
 
 <script>
 import TabBar from "../index/TabBar";
+import axios from "axios";
 export default {
   name: "Registered",
   props: {},
@@ -82,12 +82,12 @@ export default {
       }, 100);
     };
     let validatePass = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error("请输入密码"));
+      const reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/g;
+      if (!value) {
+        return callback(new Error("请填写密码"));
+      } else if (!reg.test(value)) {
+        return callback(new Error("密码格式错误"));
       } else {
-        if (this.ruleForm.checkPass !== "") {
-          this.$refs.ruleForm.validateField("checkPass");
-        }
         callback();
       }
     };
@@ -108,10 +108,11 @@ export default {
         if (!Number.isInteger(+value)) {
           callback(new Error("请输入数字值"));
         } else {
-          if (value.legth == 13) {
-            callback(new Error("请输入正确的手机号"));
-          } else {
+          const regs = /^1[3|4|5|7|8][0-9]\d{8}$/;
+          if (regs.test(value)) {
             callback();
+          } else {
+            return callback(new Error("请输入正确的手机号"));
           }
         }
       }, 1000);
@@ -129,13 +130,13 @@ export default {
       }, 100);
     };
     return {
-      loading: false,
       ruleForm: {
-        emall: "",
+        email: "",
         pass: "",
         checkPass: "",
         phone: "",
-        smscode: ""
+        smscode: "",
+        loading:''
       },
       checked: false,
       rules: {
@@ -150,18 +151,18 @@ export default {
       flag: true
     };
   },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
+  computed: {
+     loading () {
+      return this.$store.state.loading
+    }
+  },
   methods: {
-    // <!--发送验证码-->
+    // 获取验证码
     sendCode() {
       let time = 60;
       this.buttonText = "已发送";
       this.isDisabled = true;
-      
-        
+      this.loading = true;
       if (this.flag) {
         this.flag = false;
         let timer = setInterval(() => {
@@ -175,9 +176,12 @@ export default {
           }
         }, 1000);
       }
+      return this.$store.dispatch("phoneCode", Object.assign(this.ruleForm.phone));
     },
     // <!--提交注册-->
-    submitForm(formName) {}
+    submitForm() {
+      return this.$store.dispatch("loginUser", Object.assign(this.ruleForm));
+    }
   },
   components: {
     TabBar

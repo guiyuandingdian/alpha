@@ -10,7 +10,13 @@
           <span>
             <img src="../../static/img/touxiang.png" alt>
           </span>
-          <span class="name">用户名</span>
+          <el-dropdown>
+            <span class="name">{{list.name}}</span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>退出登录</el-dropdown-item>
+              <el-dropdown-item>狮子头</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
         </div>
       </el-col>
     </el-row>
@@ -20,7 +26,12 @@
 <script>
 export default {
   name: "HomeTitle",
-  props: {}
+  props: {},
+  computed: {
+    list() {
+      return this.$store.state.list;
+    }
+  }
 };
 </script>
 
