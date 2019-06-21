@@ -171,7 +171,6 @@ const store = new Vuex.Store({
     //获取个人信息
     Predict({ commit }) {
       axios.post("/Predict").then(res => {
-        // store.commit("setPredict",res.data)
         if (res.data.status == 1) {
           console.log(res)
         } else {
@@ -182,6 +181,15 @@ const store = new Vuex.Store({
 
 
     // 提交学业成绩
+    Predict_xy({ commit }) {
+      axios.post("/Predict").then(res => {
+        if (res.data.status == 1) {
+          console.log(res)
+        } else {
+          store.commit("deltoken");
+        }
+      })
+    }
 
   }
 })
