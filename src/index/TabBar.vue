@@ -45,7 +45,24 @@
           </div>
         </el-col>
         <el-col :span="4" class="denglo">
-          <router-link to="/Home" class="lgo">登录注册</router-link>
+          <div v-if="!tokens">
+            <router-link to="/Home" class="lgo">登录注册</router-link>
+          </div>
+          <div class="grid-content bg-purple-light gennen" v-if="tokens">
+            <span>
+              <img src="../../static/img/touxiang.png" alt>
+            </span>
+            <el-dropdown>
+              <span class="name">{{List.basic.name}}</span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>
+                  <router-link to="/Home" class="lgo">个人中心</router-link>
+                </el-dropdown-item>
+                <el-dropdown-item>绑定微信</el-dropdown-item>
+                <el-dropdown-item>退出登录</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -58,10 +75,15 @@ export default {
   props: {},
   data() {
     return {
-      activeIndex: "/indexs"
+      activeIndex: "/indexs",
+      tokens : localStorage.getItem("token")
     };
   },
-  computed: {},
+  computed: {
+    List() {
+      return this.$store.state.List;
+    }
+  },
   created() {},
   mounted() {},
   watch: {},
@@ -139,6 +161,24 @@ export default {
     line-height: 25px !important;
     border: none !important;
     border-radius: 20px;
+  }
+}
+.gennen {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    padding-right: 20px;
+    width: 40px;
+  }
+  .name {
+    padding-right: 20px;
+    font-size: 26px;
+    font-family: Segoe UI;
+    font-weight: 600;
+    line-height: 35px;
+    color: rgba(77, 77, 77, 1);
   }
 }
 

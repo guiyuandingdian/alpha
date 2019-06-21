@@ -37,11 +37,11 @@
             </el-form-item>
 
             <el-form-item prop="smscode" class="code">
-              <el-col :span="18">
+              <el-col :span="16">
                 <el-input v-model="ruleForm.smscode" placeholder="验证码"></el-input>
               </el-col>
-              <el-col :span="6">
-                <el-button type="primary" :disabled="isDisabled" @click="sendCode()">{{buttonText}}</el-button>
+              <el-col :span="7" :offset="1">
+                <el-button type="primary" class="hqyzm" :disabled="isDisabled" @click="sendCode()">{{buttonText}}</el-button>
               </el-col>
             </el-form-item>
             <div class="box">
@@ -239,6 +239,18 @@ export default {
   }
   .input-with-select .el-input-group__prepend {
     background-color: #fff;
+  }
+  .hqyzm {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(128, 128, 128, 1);
+    border-radius: 10px;
+    font-size: 26px;
+    line-height: 60px;
+    box-sizing: border-box;
+    padding: 0;
+    color: #c0c4cc;
   }
 }
 </style>

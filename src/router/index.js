@@ -28,6 +28,8 @@ import Hd from '../home/Hd'
 import Xzxx from '../home/Xzxx'
 import Wdzx from '../home/Wdzx'
 import Ws from '../home/Ws'
+import Rlkb from '../home/Rlkb'
+
 
 Vue.use(Router)
 
@@ -130,6 +132,13 @@ const router = new Router({
           component: Ypgb,
           meta:{
             title:'预评估表_Pre－Assessment Form'
+          }
+        },
+        {
+          path: 'Rlkb',
+          component: Rlkb,
+          meta:{
+            title:'日历看板'
           }
         },
         {

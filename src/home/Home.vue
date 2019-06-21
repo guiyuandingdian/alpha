@@ -1,11 +1,11 @@
 <template>
   <div class="wapper">
     <el-container>
-      <el-aside width="260px">
+      <el-aside width="200px">
         <HomeLeft></HomeLeft>
       </el-aside>
       <el-container>
-        <el-header style="text-align: center; font-size: 12px;height:140px;">
+        <el-header style="text-align: center; font-size: 12px;height:60px;">
           <HomeTitle></HomeTitle>
         </el-header>
         <el-main class="shitu">

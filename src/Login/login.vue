@@ -24,7 +24,7 @@
                   ></el-input>
                 </el-form-item>
                 <div class="box">
-                  <el-checkbox v-model="checked" style="color:#a0a0a0;">账户密码登录</el-checkbox>
+                  <!-- <el-checkbox v-model="checked" style="color:#a0a0a0;">账户密码登录</el-checkbox> -->
                   <router-link to="/Registered" class="Registered">注册账号</router-link>
                 </div>
                 <el-form-item>
@@ -51,7 +51,7 @@
                   </el-col>
                 </el-form-item>
                 <div class="boxs">
-                  <el-checkbox v-model="checkeds" style="color:#a0a0a0;">账户密码登录</el-checkbox>
+                  <!-- <el-checkbox v-model="checkeds" style="color:#a0a0a0;">账户密码登录</el-checkbox> -->
                   <router-link to="/Registered" class="Registered">注册账号</router-link>
                 </div>
                 <el-form-item>
@@ -159,7 +159,7 @@ export default {
     },
     // 账号密码登录
     login_method() {
-      //发送ajax
+
       return this.$store.dispatch("Elogins", Object.assign(this.login));
     },
     // 手机号登录

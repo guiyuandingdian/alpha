@@ -13,46 +13,23 @@ Vue.use(ElementUI)
 Vue.prototype.axios = axios;
 Vue.use(VueAxios, axios)
 axios.defaults.baseURL = 'http://api.alphaeducation.net'
-// axios.defaults.withCredentials = true;
+
 
 // 请求超时时间
 axios.defaults.timeout = 10000;
 
 
-export function Post(url, data) {
-  /*
-   * 采用递归算法将参数中的      Array型       数据进行转化
-   */
-  function searchArray(data) {
-    Object.keys(data).forEach((key) => {
-      if ((typeof data[key]) === 'array') {
-        data[key] = JSON.stringify(data[key]) // 这里必须使用内置JSON对象转换
-      } else if ((typeof data[key]) === 'object') {
-        searchArray(data[key])
-      }
-    })
-  }
-  searchArray(data); //递归转化Array
-  let params = qs.stringify(data); //用qs模块转化参数
-  return new Promise((resolve, reject) => {
-    axios.post(url, params).then((response) => {
-      resolve(response.data)
-    }, err => {
-      reject(err);
-    })
-  })
-}
-export function Get(url, data) {
-  return new Promise((resolve, reject) => {
-    axios.get(url, { params: data })
-      .then(response => {
-        console.log(response)
-        resolve(response.data);
-      }, err => {
-        reject(err);
-      })
-  })
-}
+axios.interceptors.request.use(
+  config => {
+    if (localStorage.getItem('Authorization')) {
+      config.headers.Authorization = localStorage.getItem('Authorization');
+    }
+
+    return config;
+  },
+  error => {
+    return Promise.reject(error);
+  });
 
 var vm = new Vue({
   el: '#app',

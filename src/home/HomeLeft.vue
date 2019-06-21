@@ -26,6 +26,10 @@
         <i class="fangkuai"></i>
         <span slot="title">预评估表</span>
       </el-menu-item>
+       <el-menu-item index="/Home/Rlkb">
+        <i class="fangkuai"></i>
+        <span slot="title">日历看板</span>
+      </el-menu-item>
       <el-submenu index="2">
         <template slot="title">
           <i class="fangkuai"></i>
