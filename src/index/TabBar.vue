@@ -76,7 +76,7 @@ export default {
   data() {
     return {
       activeIndex: "/indexs",
-      tokens : localStorage.getItem("token")
+      tokens: localStorage.getItem("token")
     };
   },
   computed: {
@@ -100,8 +100,8 @@ export default {
 .warper {
   width: 100%;
   margin: 0 auto;
-  background: #1a1a1a;
   height: 100px;
+  background: #000;
 }
 .tabbar {
   width: 1440px;

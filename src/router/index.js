@@ -110,7 +110,7 @@ const router = new Router({
       component: Home,
       redirect: '/Home/Bzlc',
       meta: {
-        requireAuth: true
+        requireAuths: true
       },
       children: [
         {

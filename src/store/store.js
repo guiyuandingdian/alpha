@@ -19,7 +19,7 @@ const store = new Vuex.Store({
       "basic": //基本信息
       {
         "name": "张三",//姓名
-        "enname": "", //英文名
+        "enname": "qweqwr", //英文名
         "sex": "2", //姓名
         "birthday": "1996-2-5", //出生年月日
         "country": "中华人民共和国", //国籍
@@ -28,23 +28,25 @@ const store = new Vuex.Store({
         "system": "全日制", //课程体制
         "ingrade": '9', //在读年级
         "finishyear": "2018", //毕业年份
-        "phone": "", //电话
+        "phone": "1110000110101", //电话
         "email": "189190@qq.com" //邮箱
       },
       "aca": //学业信息
       {
-        "d_country": "", //意向留学国家
-        "d_school": "", //梦校
-        "d_major": "", //意向留学专业
-        "insubjects": "", //在读科目
-        "nowranking": "", //目前成绩排名
-        "nowgpa": "" //目前GPA
+        "d_country": "美国", //意向留学国家
+        "d_school": "家里蹲", //梦校
+        "d_major": "化学", //意向留学专业
+        "insubjects": "化学s", //在读科目
+        "nowranking": "13254", //目前成绩
+        "nowrankings": "13", //目前排名
+        "nowgpa": "256" //目前GPA
       },
       "back": //学生背景
       {
-        "honor": "", //荣誉及奖项
-        "active": "",  //课外活动
-        "hobby": "" //个人爱好
+        "honor": "荣誉及奖项", //荣誉及奖项
+        "active": "课外活动",  //课外活动
+        "hobby": "个人爱好" ,//个人爱好
+        "res": '顾问反馈' //顾问反馈
       },
       "que": { //Student Questionnaire
         "an_one": "", //问题1
@@ -79,18 +81,15 @@ const store = new Vuex.Store({
   getters: {
     GET_USER(state) {
       //先从state里面获取用户登录信息
-      let user = state.user;
+      let token = state.token;
       //如果 state 里面获取不到，那么从localStorage里面获取
-      if (!user) {
-        user = JSON.parse(window.localStorage.getItem('user') || "")
+      if (!token) {
+        token = jsHelper.localStorage.get("token")
       }
-      return user;
+      return token;
     },
   },
   mutations: {
-    editUser(state, user) {
-      state.user = user;
-    },
     // loding 动画
     loging(state) {
       state.loading = true
@@ -101,20 +100,16 @@ const store = new Vuex.Store({
     logingss(state) {
       state.loadingss = true
     },
-    tlogingss(state) {
+    tlogings(state) {
       state.loadings = false
     },
     tlogingss(state) {
       state.loadingss = false
     },
-    settoken(value){
-      var curTime = +604800;
-      localStorage.setItem("token",{value,time:curTime});
-  },
-    deltoken(state) {
-      state.token = ''
-      sessionStorage.removeItem('token')
-    },
+    //删除 token
+    deltoken(){
+      localStorage.removeItem('token')
+    }
   },
   actions: {
     //获取验证码
@@ -132,7 +127,9 @@ const store = new Vuex.Store({
     loginUser({ commit }, ruleForm) {
       axios.post("/register", qs.stringify(ruleForm)).then(res => {
         if (src.status == 1) {
-          localStorage.setItem(key, value);
+          var token = res.data.user
+          jsHelper.localStorage.set("token",token,168)
+          router.push("/Home")
         }
       })
       store.commit("loging")
@@ -144,8 +141,9 @@ const store = new Vuex.Store({
       axios.post("/login", logins).then(res => {
         if (res.data.status == 1) {
           var token = res.data.user
-          store.commit("settoken",token);
+          jsHelper.localStorage.set("token",token,168)
           router.push("/Home")
+          store.commit("tlogings")
         }else{
           alert(res.data.message)
           store.commit("tlogings")
@@ -164,6 +162,22 @@ const store = new Vuex.Store({
           router.push("/Home")
         } else {
           store.commit("tlogingss")
+        }
+      })
+    },
+
+    // 退出登录
+    bay(){
+      store.commit("deltoken")
+      router.push("/")
+    },
+    //获取预评估表
+    stepOne({ commit }) {
+      axios.post("/stepOne").then(res => {
+        if (res.data.status == 1) {
+          console.log(res)
+        } else {
+         
         }
       })
     },
@@ -190,6 +204,8 @@ const store = new Vuex.Store({
         }
       })
     }
+
+
 
   }
 })

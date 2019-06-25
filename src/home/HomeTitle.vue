@@ -12,9 +12,11 @@
           </span>
           <el-dropdown>
             <span class="name">{{List.basic.name}}</span>
-            <el-dropdown-menu slot="dropdown">  
+            <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>绑定微信</el-dropdown-item>
-              <el-dropdown-item>退出登录</el-dropdown-item>
+              <el-dropdown-item @click="bay()">
+                <span @click="bay()">退出登录</span>
+              </el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -30,6 +32,12 @@ export default {
   computed: {
     List() {
       return this.$store.state.List;
+    }
+  },
+  methods: {
+    //退出登录
+    bay() {
+      return this.$store.dispatch("bay");
     }
   }
 };
